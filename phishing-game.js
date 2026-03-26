@@ -18,7 +18,7 @@ const emails = [
     from: "info@outlook-support.dk",
     subject: "MS Outlook Support",
     body: `
-    <img src="images/Copilot_20260326_201051.png" class="left" width="300" height="100" alt="cartoon officer">
+    <img src="images/outlook.png.png" class="left" width="300" height="100" alt="cartoon officer">
      <br> Dear User,
       <p>All Hotmail customers have been upgraded to Outlook.com. Youre Hotmail Account services has expired.</p><br>
       <p>Due to our new system upgrade to Outlook. In order for it to remain active<br>follow the link sign in Re-activate your account to Outlook.<br>
