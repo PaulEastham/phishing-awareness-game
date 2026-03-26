@@ -22,7 +22,7 @@ const emails = [
      <br> Dear User,
       <p>All Hotmail customers have been upgraded to Outlook.com. Youre Hotmail Account services has expired.</p><br>
       <p>Due to our new system upgrade to Outlook. In order for it to remain active<br>follow the link sign in Re-activate your account to Outlook.<br>
-      <a href="#">https://www.account.live.com</a></p>
+      <p><a href="#">https://www.account.live.com</a></p>
       <p>Thanks,</p>
       <p>Microsoft Support Team</p>
     `,
