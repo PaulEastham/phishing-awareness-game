@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="phishinggame.css">
+<title>Phishing Awareness Game</title>
+</head>
+<body>
+
+
+
+
+
+<!-- FRONT PAGE -->
+<div id="screen-home" class="screen active">
+  <h1>Phishing Awareness Game</h1>
+  <p>Learn to spot phishing scams. Protect yourself from cyber criminals.</p>
+  <img src="images/pc-bobby.png" class="center" width="350" height="350" alt="cartoon officer">
+
+  <button class="btn btn-primary" id="start-btn">Start Training</button>
+</div>
+
+<!-- GAME SCREEN -->
+<div id="screen-game" class="screen">
+  <h2>Email Challenge</h2>
+
+  <div class="email-card">
+    <div class="email-header">
+      <strong>From:</strong> <span id="from"></span><br>
+      <strong>Subject:</strong> <span id="subject"></span>
+      
+    </div>
+    <div id="body"></div>
+
+   
+
+    <button class="next-btn" id="btn-next">Next Email</button>
+  </div>
+   <div class="choices">
+      <button class="btn safe-btn" id="btn-safe">Legit</button>
+      <button class="btn phish-btn" id="btn-phish">Phishing</button>
+    </div>
+
+    <div id="feedback"></div>
+</div>
+
+
+<!-- RESULTS SCREEN -->
+<div id="screen-results" class="screen">
+  <h2>Training Complete</h2>
+
+  <div class="score-box">
+    <p><strong>Score:</strong> <span id="final-score"></span></p>
+    <p><strong>Accuracy:</strong> <span id="final-accuracy"></span></p>
+    <p><strong>Best Streak:</strong> <span id="final-streak"></span></p>
+  </div>
+
+  <button class="btn btn-primary" id="restart-btn">Play Again</button>
+</div>
+
+
+<!-- TIPS CARD -->
+<div id="tips-card" class="hidden">
+  <div class="tips-content">
+    <h3>Tip</h3>
+    <p id="tips-message"></p>
+    <button class="btn tips-close" id="tips-close">Close</button>
+    
+  </div>
+    
+</div>
+
+
+<!-- QR Code -->
+<div id="qrcode"></div>
+
+
+
+
+<script src="phishing-game.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+<script>
+  // Generate QR code linking to your phishing game
+  const qrCode = new QRCode(document.getElementById("qrcode"), {
+    text: "http://127.0.0.1:5500/phishing-game.html",
+    width: 128,
+    height: 128,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
+</body>
+
+</html>

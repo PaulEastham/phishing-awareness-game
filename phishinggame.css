@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
+  .screen {
+    display: none;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  p {
+    text-align: center;
+  }
+  .active {
+    display: block;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: #38bdf8;
+    color: #0f172a;
+  }
+
+  .email-card {
+    background: #1e293b;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+
+  .email-header {
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .choices {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .safe-btn {
+    background: #22c55e;
+    color: #0f172a;
+  }
+
+  .phish-btn {
+    background: #ef4444;
+    color: #fff;
+  }
+
+  .feedback {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .correct {
+    background: rgba(34, 197, 94, 0.2);
+    border-left: 4px solid #22c55e;
+  }
+
+  .incorrect {
+    background: rgba(239, 68, 68, 0.2);
+    border-left: 4px solid #ef4444;
+  }
+
+  .next-btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .score-box {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/* Battenburg Border Styling - 2 Row Version */
+body {
+    margin: 0;
+    padding: 0;
+    /* Create space for the borders so content doesn't get hidden */
+    /* 60px height (2 rows of 30px) + 5px black separator */
+    border-top: 65px solid transparent; 
+    border-bottom: 65px solid transparent;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #0f172a /* Light grey background for the app */
+}
+
+body::before, 
+body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 60px; /* This fits two rows of 30px squares */
+    z-index: 9999;
+    
+    /* Creating the 2-row checkerboard */
+    background-color: #ffff00; /* Primary Yellow */
+    background-image: 
+        linear-gradient(45deg, #0000ff 25%, transparent 25%), 
+        linear-gradient(-45deg, #0000ff 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #0000ff 75%), 
+        linear-gradient(-45deg, transparent 75%, #0000ff 75%);
+    background-size: 60px 60px; /* Size determines the square width/height */
+    background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+}
+
+/* Top Border Styling */
+body::before {
+    top: 0;
+    border-bottom: 5px solid #000; /* Thick black line to match police aesthetic */
+}
+
+/* Bottom Border Styling */
+body::after {
+    bottom: 0;
+    border-top: 5px solid #000;
+}
+
+
+
+#tips-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.tips-content {
+  background: Black;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+}
+.tips-close {
+    margin-top: 16px;
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+.hidden {
+  display: none !important;
+}
+
+#qrcode {
+  margin: 20px auto;
+  width: 128px;
+}
