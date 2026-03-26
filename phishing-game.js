@@ -155,9 +155,9 @@ document.getElementById("restart-btn").onclick = () => {
   showScreen("game");
 };
 /* QR CODE */
-const gameUrl = "http://127.0.0.1:5500/phishing-game.html";
+const gameUrl = "https://pauleastham.github.io/phishing-awareness-game/";
 new QRCode(document.getElementById("qrcode"), {
-    text: "http://127.0.0.1:5500/phishing-game.html",
+    text: "https://pauleastham.github.io/phishing-awareness-game/",
     width: 256,
     height: 256,
     colorDark : "#000000",
