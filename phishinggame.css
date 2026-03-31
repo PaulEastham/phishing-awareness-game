@@ -203,7 +203,20 @@ body::after {
   display: none !important;
 }
 
+}
+.hero-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;        /* space between officer + QR */
+  margin-bottom: 20px;
+}
+
+.hero-img {
+  max-width: 40%;
+}
+
 #qrcode {
-  margin: 128px auto;
   width: 128px;
+  height: 128px;
 }
