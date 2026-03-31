@@ -96,7 +96,7 @@ tipsClose.addEventListener("click", () => {
 /* SAFE BUTTON */
 document.getElementById("btn-safe").addEventListener("click", () => {
   const email = emails[index];
-  const isCorrect = email.isPhish === false;
+  const isCorrect = email.isPhish === true;
 
   if (isCorrect) {
     correct++;
