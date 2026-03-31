@@ -179,7 +179,7 @@ document.getElementById("end-btn").onclick = () => {
   streak = 0;
   bestStreak = 0;
 
-  showScreen("game");
+  showScreen("home");
 };
 
 /* QR CODE */
