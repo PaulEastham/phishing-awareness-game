@@ -222,8 +222,8 @@ body::after {
 }
 
 .speech-bubble {
-  background: #ffffff;
-  color: #000;
+  background: #38bdf8;
+  color: #0f172a;
   padding: 10px 18px;
   border-radius: 12px;
   font-weight: bold;
