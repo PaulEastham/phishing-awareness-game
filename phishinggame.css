@@ -94,6 +94,17 @@ body {
     font-size: 1rem;
     font-weight: 600;
   }
+    .end-btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }
 
   .score-box {
     background: #1e293b;
