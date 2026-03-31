@@ -33,10 +33,16 @@ const emails = [
     subject: "Your password has been changed",
     body: `
       <h2>Your password has been changed</h2><br>
-      <p>As requested we've changed the password that you use to sign into Sky services.
-      You will no longer be able to sign in using any of your previous passwords.</p><br>
-      <p>If you didn't ask us to change your password, <u>Contact Us</u> so we can help
-      keep your account secure.
+       <p>
+    As requested, we've changed the password that you use to sign into Sky services. 
+    You will no longer be able to sign in using any of your previous passwords.
+  </p>
+  <p>
+    If you didn’t ask us to change your password, 
+    <a href="https://www.sky.com/help" target="_blank" rel="noopener noreferrer">
+      contact us
+    </a> so we can help keep your account secure.
+  </p>
     `,
     isPhish: false
   }
@@ -174,6 +180,17 @@ document.getElementById("restart-btn").onclick = () => {
   loadEmail();
   showScreen("game");
 };
+
+/* RETURN TO START */
+document.getElementById("end-btn").onclick = () => {
+  index = 0;
+  correct = 0;
+  streak = 0;
+  bestStreak = 0;
+
+  showScreen("home");
+};
+
 /* QR CODE */
 const gameUrl = "https://pauleastham.github.io/phishing-awareness-game/";
 new QRCode(document.getElementById("qrcode"), {
