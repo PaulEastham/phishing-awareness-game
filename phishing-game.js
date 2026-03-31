@@ -47,6 +47,7 @@ let index = 0;
 let correct = 0;
 let streak = 0;
 let bestStreak = 0;
+let answered = false;
 
 /* ELEMENTS */
 const screens = {
@@ -97,6 +98,14 @@ document.getElementById("btn-safe").addEventListener("click", () => {
   const email = emails[index];
   const isCorrect = email.isPhish === false;
 
+  if (isCorrect) {
+    correct++;
+    streak++;
+    if (streak > bestStreak) bestStreak = streak;
+  } else {
+    streak = 0;
+  }
+
   showTip(
     isCorrect
       ? "Correct! Always check the sender address."
@@ -108,6 +117,14 @@ document.getElementById("btn-safe").addEventListener("click", () => {
 document.getElementById("btn-phish").addEventListener("click", () => {
   const email = emails[index];
   const isCorrect = email.isPhish === true;
+
+  if (isCorrect) {
+    correct++;
+    streak++;
+    if (streak > bestStreak) bestStreak = streak;
+  } else {
+    streak = 0;
+  }
 
   showTip(
     isCorrect
