@@ -38,7 +38,7 @@ const emails = [
       <p>If you didn't ask us to change your password, <u>Contact Us</u> so we can help
       keep your account secure.
     `,
-    isPhish: true
+    isPhish: false
   }
 ];
 
