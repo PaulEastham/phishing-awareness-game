@@ -170,16 +170,7 @@ document.getElementById("start-btn").onclick = () => {
   showScreen("game");
 };
 
-/* RESTART BUTTON */
-document.getElementById("restart-btn").onclick = () => {
-  index = 0;
-  correct = 0;
-  streak = 0;
-  bestStreak = 0;
 
-  loadEmail();
-  showScreen("game");
-};
 
 /* RETURN TO START */
 document.getElementById("end-btn").onclick = () => {
