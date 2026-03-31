@@ -33,7 +33,7 @@ const emails = [
     subject: "Your password has been changed",
     body: `
       <h2>Your password has been changed</h2><br>
-      <p>As requested we've changed the password that you use to sign into Sky services.<br>
+      <p>As requested we've changed the password that you use to sign into Sky services.
       You will no longer be able to sign in using any of your previous passwords.</p><br>
       <p>If you didn't ask us to change your password, <u>Contact Us</u> so we can help
       keep your account secure.
