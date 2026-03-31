@@ -26,14 +26,17 @@ const emails = [
       <p>Thanks,</p>
       <p>Microsoft Support Team</p>
     `,
-    isPhish: false
+    isPhish: true
   },
   {
-    from: "Microsoft 365 Security <security@m1crosoft365.com>",
-    subject: "Suspicious login detected",
+    from: "Sky<sky@notifications.contact.sky>",
+    subject: "Your password has been changed",
     body: `
-      <p>We detected a login from Russia. Verify now:</p>
-      <p><a href="#">Review activity</a></p>
+      <h2>Your password has been changed</h2><br>
+      <p>As requested we've changed the password that you use to sign into Sky services.<br>
+      You will no longer be able to sign in using any of your previous passwords.</p>,<br>
+      <p>If you didn't ask us to change your password, <u>Contact Us</u> so we can help
+      keep your account secure.
     `,
     isPhish: true
   }
