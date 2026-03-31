@@ -29,7 +29,7 @@ const emails = [
     isPhish: true
   },
   {
-    from: "<Skysky@notifications.contact.sky>",
+    from: "Sky""sky@notifications.contact.sky",
     subject: "Your password has been changed",
     body: `
       <h2>Your password has been changed</h2><br>
