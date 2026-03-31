@@ -204,6 +204,6 @@ body::after {
 }
 
 #qrcode {
-  margin: 20px auto;
+  margin: 128px auto;
   width: 128px;
 }
