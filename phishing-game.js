@@ -105,7 +105,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
   } else {
     streak = 0;
   }
-
+console.log("index:", index, "isPhish:", email.isPhish, "button: SAFE");
   showTip(
     isCorrect
       ? "Correct! Always check the sender address."
@@ -125,7 +125,7 @@ document.getElementById("btn-phish").addEventListener("click", () => {
   } else {
     streak = 0;
   }
-
+console.log("index:", index, "isPhish:", email.isPhish, "button: SAFE");
   showTip(
     isCorrect
       ? "Correct! Hover links before clicking."
