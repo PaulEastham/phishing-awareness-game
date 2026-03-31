@@ -220,6 +220,31 @@ body::after {
   width: 128px;
   height: 128px;
 }
+
+.speech-bubble {
+  background: #ffffff;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+  margin-left: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* The little triangle pointer */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #ffffff transparent transparent;
+}
+
 @media (max-width: 600px) {
     .hero-row {
         flex-direction: column;
