@@ -38,7 +38,7 @@ const emails = [
     You will no longer be able to sign in using any of your previous passwords.
   </p>
   <p>
-    If you didn’t ask us to change your password, 
+    If you didn't ask us to change your password, 
     <a href="https://www.sky.com/help" target="_blank" rel="noopener noreferrer">
       contact us
     </a> so we can help keep your account secure.
