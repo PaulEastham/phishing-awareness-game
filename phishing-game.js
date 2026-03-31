@@ -29,12 +29,12 @@ const emails = [
     isPhish: true
   },
   {
-    from: "Sky<sky@notifications.contact.sky>",
+    from: "<Skysky@notifications.contact.sky>",
     subject: "Your password has been changed",
     body: `
       <h2>Your password has been changed</h2><br>
       <p>As requested we've changed the password that you use to sign into Sky services.<br>
-      You will no longer be able to sign in using any of your previous passwords.</p>,<br>
+      You will no longer be able to sign in using any of your previous passwords.</p><br>
       <p>If you didn't ask us to change your password, <u>Contact Us</u> so we can help
       keep your account secure.
     `,
@@ -105,7 +105,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
   } else {
     streak = 0;
   }
-console.log("index:", index, "isPhish:", email.isPhish, "button: SAFE");
+
   showTip(
     isCorrect
       ? "Correct! Always check the sender address."
@@ -125,7 +125,7 @@ document.getElementById("btn-phish").addEventListener("click", () => {
   } else {
     streak = 0;
   }
-console.log("index:", index, "isPhish:", email.isPhish, "button: SAFE");
+
   showTip(
     isCorrect
       ? "Correct! Hover links before clicking."
