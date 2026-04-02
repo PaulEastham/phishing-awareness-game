@@ -196,6 +196,7 @@ const emails = [
     from: "Royal Mail <delivery@royalmail-fee.co.uk>",
     subject: "Your parcel is waiting – unpaid fee",
     body: `
+    <img src="images/rm logo.webp" class="left" width="250" height="250" alt="royal mail logo">
     <p>Your parcel is being held due to an unpaid fee of £1.99.</p>
     <p>Please pay now to release your delivery.</p>
     <p><a href="#">Pay Fee</a></p>
