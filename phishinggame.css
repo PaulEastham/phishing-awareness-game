@@ -199,6 +199,13 @@ body::after {
     font-weight: 600;
   }
 
+#tips-message {
+  color: #38bdf8; /* Light blue text */
+}
+
+.tips-content h3 {
+  color: #38bdf8; /* Title colour */
+}
 .hidden {
   display: none !important;
 }
