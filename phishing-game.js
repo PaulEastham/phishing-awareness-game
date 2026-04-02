@@ -58,7 +58,8 @@ function showTip(message) {
 tipsClose.addEventListener("click", () => {
   tipsCard.classList.add("hidden");
 
-  ----------------------------------------/* MOVE TO NEXT EMAIL */------------------------------------------------------------------------
+
+----------------------------------------/* MOVE TO NEXT EMAIL */------------------------------------------------------------------------
   index++;
 
   if (index >= emails.length) {
@@ -67,6 +68,7 @@ tipsClose.addEventListener("click", () => {
     loadEmail();
   }
 });
+
 
 ----------------------------------/* SAFE BUTTON */----------------------------------------------------------------------------------------
 document.getElementById("btn-safe").addEventListener("click", () => {
@@ -91,6 +93,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
 }
 });
 
+
 ------------------------------------------/* PHISH BUTTON */-----------------------------------------------------------------
 document.getElementById("btn-phish").addEventListener("click", () => {
   const email = emails[index];
@@ -113,6 +116,8 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     showTip("Correct! Hover links before clicking.");
 }
 });
+
+
 ------------------ /* RESULTS FUNC */-------------------------------------------------------------------------------------------------
 function showResults() {
   showScreen("results");
@@ -121,6 +126,7 @@ function showResults() {
   document.getElementById("final-accuracy").textContent = `${accuracy}%`;
   document.getElementById("final-streak").textContent = bestStreak;
 }
+
 
 ----------------------------------------------/* FRONT PAGE BUTTON */------------------------------------------------------------------
 document.getElementById("start-btn").onclick = () => {
@@ -134,6 +140,7 @@ document.getElementById("start-btn").onclick = () => {
   loadEmail();
   showScreen("game");
 };
+
 
 ------------------------------------------------/* EMAIL DATA */-------------------------------------------------------------------------
 const emails = [
@@ -185,6 +192,7 @@ const emails = [
   }
 ];
 
+
 -------------------------------------------------/* RETURN TO START */-------------------------------------------------------------------------
 document.getElementById("end-btn").onclick = () => {
   index = 0;
@@ -195,19 +203,23 @@ document.getElementById("end-btn").onclick = () => {
   showScreen("home");
 };
 
+
 ---------------------------------------------------/* POLICE ALERT */---------------------------------------------------------------------
 function triggerPoliceAlert() {
   const alertOverlay = document.getElementById("police-alert");
   const siren = document.getElementById("siren-sound");
 
+  
 --------------------------------------/* SHOW FLASHING OVERLAY */------------------------------------------------------------------------
   alertOverlay.style.display = "block";
+
 
 -----------------------/* PLAY SIREN */--------------------------------------------------------------------------------------------------
   if (siren) {
     siren.currentTime = 0;
     siren.play().catch(() => {});
   }
+
   
 --------------------------/* AUTO STOP AFTER 1s */-----------------------------------------------------------------------------------
   setTimeout(() => {
