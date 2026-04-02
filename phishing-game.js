@@ -1,4 +1,4 @@
-/* SHUFFLE FUNC */
+----------------------------------/* SHUFFLE FUNC */-----------------------------------------------------------------------------------------------
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -7,9 +7,7 @@ function shuffle(array) {
 }
 
 
-
-
-/* STATE */
+--------------------------------------/* STATE */-------------------------------------------------------------------------------------------------
 let index = 0;
 let correct = 0;
 let streak = 0;
@@ -28,7 +26,8 @@ function showScreen(name) {
   screens[name].classList.add("active");
 }
 
-/* GAME LOGIC */
+
+-------------------------------/* GAME LOGIC */---------------------------------------------------------------------------------------------------
 const elFrom = document.getElementById("from");
 const elSubject = document.getElementById("subject");
 const elBody = document.getElementById("body");
@@ -43,7 +42,8 @@ function loadEmail() {
   elFeedback.innerHTML = "";
 }
 
-/* TIPS CARD */
+
+----------------------------------------/* TIPS CARD */----------------------------------------------------------------------------------------------
 const tipsCard = document.getElementById("tips-card");
 const tipsMessage = document.getElementById("tips-message");
 const tipsClose = document.getElementById("tips-close");
@@ -58,7 +58,7 @@ function showTip(message) {
 tipsClose.addEventListener("click", () => {
   tipsCard.classList.add("hidden");
 
-  // Move to next email
+  ----------------------------------------/* MOVE TO NEXT EMAIL */------------------------------------------------------------------------
   index++;
 
   if (index >= emails.length) {
@@ -68,7 +68,7 @@ tipsClose.addEventListener("click", () => {
   }
 });
 
-/* SAFE BUTTON */
+----------------------------------/* SAFE BUTTON */----------------------------------------------------------------------------------------
 document.getElementById("btn-safe").addEventListener("click", () => {
   const email = emails[index];
   const isCorrect = email.isPhish === false;
@@ -91,7 +91,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
 }
 });
 
-/* PHISH BUTTON */
+------------------------------------------/* PHISH BUTTON */-----------------------------------------------------------------
 document.getElementById("btn-phish").addEventListener("click", () => {
   const email = emails[index];
   const isCorrect = email.isPhish === true;
@@ -113,19 +113,16 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     showTip("Correct! Hover links before clicking.");
 }
 });
-
-
+------------------ /* RESULTS FUNC */-------------------------------------------------------------------------------------------------
 function showResults() {
   showScreen("results");
-
   const accuracy = Math.round((correct / emails.length) * 100);
-
   document.getElementById("final-score").textContent = `${correct} / ${emails.length}`;
   document.getElementById("final-accuracy").textContent = `${accuracy}%`;
   document.getElementById("final-streak").textContent = bestStreak;
 }
 
-/* FRONT PAGE BUTTON */
+----------------------------------------------/* FRONT PAGE BUTTON */------------------------------------------------------------------
 document.getElementById("start-btn").onclick = () => {
   index = 0;
   correct = 0;
@@ -138,7 +135,7 @@ document.getElementById("start-btn").onclick = () => {
   showScreen("game");
 };
 
-/* EMAIL DATA */
+------------------------------------------------/* EMAIL DATA */-------------------------------------------------------------------------
 const emails = [
   {
     from: "info.wwypv@phc.diocesewnc.org>",
@@ -188,7 +185,7 @@ const emails = [
   }
 ];
 
-/* RETURN TO START */
+-------------------------------------------------/* RETURN TO START */-------------------------------------------------------------------------
 document.getElementById("end-btn").onclick = () => {
   index = 0;
   correct = 0;
@@ -198,23 +195,21 @@ document.getElementById("end-btn").onclick = () => {
   showScreen("home");
 };
 
-
-
-/* POLICE ALERT */
+---------------------------------------------------/* POLICE ALERT */---------------------------------------------------------------------
 function triggerPoliceAlert() {
   const alertOverlay = document.getElementById("police-alert");
   const siren = document.getElementById("siren-sound");
 
-  // Show flashing overlay
+--------------------------------------/* SHOW FLASHING OVERLAY */------------------------------------------------------------------------
   alertOverlay.style.display = "block";
 
-  // Play siren (if browser allows)
+-----------------------/* PLAY SIREN */--------------------------------------------------------------------------------------------------
   if (siren) {
     siren.currentTime = 0;
     siren.play().catch(() => {});
   }
-
-  // Auto-stop after 1 second
+  
+--------------------------/* AUTO STOP AFTER 1s */-----------------------------------------------------------------------------------
   setTimeout(() => {
     alertOverlay.style.display = "none";
     if (siren) siren.pause();
