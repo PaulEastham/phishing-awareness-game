@@ -87,7 +87,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
 
     setTimeout(() => {
         showTip("Incorrect. Look for urgent or threatening language.");
-    }, 3000); // matches your police alert duration
+    }, 2000); // matches your police alert duration
 } else {
     showTip("Correct! Always check the sender address.");
 }
@@ -111,7 +111,7 @@ document.getElementById("btn-phish").addEventListener("click", () => {
 
     setTimeout(() => {
         showTip("Incorrect. This email used a spoofed domain.");
-    }, 3000);
+    }, 2000);
 } else {
     showTip("Correct! Hover links before clicking.");
 }
@@ -225,5 +225,5 @@ function triggerPoliceAlert() {
   setTimeout(() => {
     alertOverlay.style.display = "none";
     if (siren) siren.pause();
-  }, 3000);
+  }, 2000);
 }
