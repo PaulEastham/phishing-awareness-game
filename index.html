@@ -8,44 +8,34 @@
 </head>
 <body>
 
-
-
-
-
+  
 <!-- FRONT PAGE -->
 <div id="screen-home" class="screen active">
   <h1>Phishing Awareness Game</h1>
   <p>Learn to spot phishing scams. Protect yourself from cyber criminals.</p>
- 
   <div class="hero-row">
   <img src="images/pc-bobby.png" class="hero-img" width="350" height="350" alt="cartoon officer">
   <div id="qrcode"></div>
   <div class="speech-bubble">Scan Me!</div>
 </div>
-  
   <button class="btn btn-primary" id="start-btn">Start Training</button>
 </div>
-
 
 
 <!-- GAME SCREEN -->
 <div id="screen-game" class="screen">
   <h2>Email Challenge</h2>
-
   <div class="email-card">
     <div class="email-header">
       <strong>From:</strong> <span id="from"></span><br>
       <strong>Subject:</strong> <span id="subject"></span>
-      
     </div>
     <div id="body"></div>
-
   </div>
    <div class="choices">
       <button class="btn safe-btn" id="btn-safe">Legit</button>
       <button class="btn phish-btn" id="btn-phish">Phishing</button>
     </div>
-
     <div id="feedback"></div>
 </div>
 
@@ -53,13 +43,11 @@
 <!-- RESULTS SCREEN -->
 <div id="screen-results" class="screen">
   <h2>Training Complete</h2>
-
   <div class="score-box">
     <p><strong>Score:</strong> <span id="final-score"></span></p>
     <p><strong>Accuracy:</strong> <span id="final-accuracy"></span></p>
     <p><strong>Best Streak:</strong> <span id="final-streak"></span></p>
   </div>
-
   <button id="end-btn" class="btn fin-btn">End</button>
 </div>
 
@@ -70,17 +58,11 @@
     <h3>Tip</h3>
     <p id="tips-message"></p>
     <button class="btn tips-close" id="tips-close">Close</button>
-    
   </div>
-    
 </div>
 
-
-
-
-
-
-
+  
+<!-- GAME SCRIPT EXTRAS -->
 <script src="phishing-game.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
 <script>
@@ -94,6 +76,8 @@
     correctLevel: QRCode.CorrectLevel.H
   });
 </script>
-</body>
 
+
+
+</body>
 </html>
