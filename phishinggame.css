@@ -44,6 +44,15 @@ body {
     border-radius: 12px;
     margin-top: 20px;
   }
+  .email-card,
+  .email-card * {
+  color: #000000 !important;
+}
+
+.email-card a {
+  color: #1d4ed8 !important; /* optional: blue links */
+  text-decoration: underline;
+}
 
   .email-header {
     border-bottom: 1px solid #334155;
