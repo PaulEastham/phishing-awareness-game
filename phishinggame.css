@@ -38,10 +38,9 @@ body {
   }
 
   .email-card {
-    background: #1e293b;
-    flex: 1;
-    overflow-y: auto;
-  }
+  flex: 1;
+  overflow-y: auto;
+}
 
   .email-header {
     border-bottom: 1px solid #334155;
