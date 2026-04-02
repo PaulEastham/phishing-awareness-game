@@ -196,16 +196,7 @@ document.getElementById("end-btn").onclick = () => {
   showScreen("home");
 };
 
-/* QR CODE */
-const gameUrl = "https://pauleastham.github.io/phishing-awareness-game/";
-new QRCode(document.getElementById("qrcode"), {
-    text: "https://pauleastham.github.io/phishing-awareness-game/",
-    width: 256,
-    height: 256,
-    colorDark : "#000000",
-    colorLight : "#ffffff",
-    correctLevel : QRCode.CorrectLevel.H
-});
+
 
 /* POLICE ALERT */
 function triggerPoliceAlert() {
