@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+  overflow: hidden;   /* prevent page scroll */
+}
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
