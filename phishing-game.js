@@ -85,7 +85,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
 
     setTimeout(() => {
         showTip("Incorrect. Look for urgent or threatening language.");
-    }, 1000); // matches your police alert duration
+    }, 3000); // matches your police alert duration
 } else {
     showTip("Correct! Always check the sender address.");
 }
@@ -108,7 +108,7 @@ document.getElementById("btn-phish").addEventListener("click", () => {
 
     setTimeout(() => {
         showTip("Incorrect. This email used a spoofed domain.");
-    }, 1000);
+    }, 3000);
 } else {
     showTip("Correct! Hover links before clicking.");
 }
