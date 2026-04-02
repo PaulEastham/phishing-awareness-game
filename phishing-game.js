@@ -82,12 +82,13 @@ document.getElementById("btn-safe").addEventListener("click", () => {
   }
   if (!isCorrect) {
     triggerPoliceAlert();
+
+    setTimeout(() => {
+        showTip("Incorrect. Look for urgent or threatening language.");
+    }, 1000); // matches your police alert duration
+} else {
+    showTip("Correct! Always check the sender address.");
 }
-  showTip(
-    isCorrect
-      ? "Correct! Always check the sender address."
-      : "Incorrect. Look for urgent or threatening language."
-  );
 });
 
 /* PHISH BUTTON */
@@ -102,14 +103,15 @@ document.getElementById("btn-phish").addEventListener("click", () => {
   } else {
     streak = 0;
   }
-  if (!isCorrect) {
+ if (!isCorrect) {
     triggerPoliceAlert();
+
+    setTimeout(() => {
+        showTip("Incorrect. This email used a spoofed domain.");
+    }, 1000);
+} else {
+    showTip("Correct! Hover links before clicking.");
 }
-  showTip(
-    isCorrect
-      ? "Correct! Hover links before clicking."
-      : "Incorrect. This email used a spoofed domain."
-  );
 });
 
 
