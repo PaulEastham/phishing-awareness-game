@@ -164,7 +164,7 @@ const emails = [
     from: "info@outlook-support.dk",
     subject: "MS Outlook Support",
     body: `
-    <img src="images/outlook2.png" class="left" width="250" height="250" alt="outlook logo">
+    <img src="images/outlook2.png" class="left" width="150" height="150" alt="outlook logo">
      <br> Dear User,
       <p>All Hotmail customers have been upgraded to Outlook.com. Youre Hotmail Account services has expired.</p><br>
       <p>Due to our new system upgrade to Outlook. In order for it to remain active<br>follow the link sign in Re-activate your account to Outlook.<br>
@@ -196,7 +196,7 @@ const emails = [
     from: "Royal Mail <delivery@royalmail-fee.co.uk>",
     subject: "Your parcel is waiting – unpaid fee",
     body: `
-    <img src="images/rm logo.webp" class="left" width="250" height="250" alt="royal mail logo">
+    <img src="images/rm logo.webp" class="left" width="150" height="150" alt="royal mail logo">
     <p>Your parcel is being held due to an unpaid fee of £1.99.</p>
     <p>Please pay now to release your delivery.</p>
     <p><a href="#">Pay Fee</a></p>
