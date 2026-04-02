@@ -225,5 +225,5 @@ function triggerPoliceAlert() {
   setTimeout(() => {
     alertOverlay.style.display = "none";
     if (siren) siren.pause();
-  }, 1000);
+  }, 3000);
 }
