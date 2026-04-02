@@ -126,6 +126,8 @@ document.getElementById("start-btn").onclick = () => {
   streak = 0;
   bestStreak = 0;
 
+  shuffle(emails)
+
   loadEmail();
   showScreen("game");
 };
