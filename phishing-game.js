@@ -80,7 +80,9 @@ document.getElementById("btn-safe").addEventListener("click", () => {
   } else {
     streak = 0;
   }
-
+  if (!isCorrect) {
+    triggerPoliceAlert();
+}
   showTip(
     isCorrect
       ? "Correct! Always check the sender address."
@@ -100,7 +102,9 @@ document.getElementById("btn-phish").addEventListener("click", () => {
   } else {
     streak = 0;
   }
-
+  if (!isCorrect) {
+    triggerPoliceAlert();
+}
   showTip(
     isCorrect
       ? "Correct! Hover links before clicking."
@@ -202,3 +206,24 @@ new QRCode(document.getElementById("qrcode"), {
     colorLight : "#ffffff",
     correctLevel : QRCode.CorrectLevel.H
 });
+
+/* POLICE ALERT */
+function triggerPoliceAlert() {
+  const alertOverlay = document.getElementById("police-alert");
+  const siren = document.getElementById("siren-sound");
+
+  // Show flashing overlay
+  alertOverlay.style.display = "block";
+
+  // Play siren (if browser allows)
+  if (siren) {
+    siren.currentTime = 0;
+    siren.play().catch(() => {});
+  }
+
+  // Auto-stop after 1 second
+  setTimeout(() => {
+    alertOverlay.style.display = "none";
+    if (siren) siren.pause();
+  }, 1000);
+}
