@@ -210,6 +210,16 @@ const emails = [
     `,
     isPhish: false
   },
+   {
+    from: "Apple Support <security@appleid-lock.com>",
+    subject: "Your Apple ID has been locked",
+    body: `
+   <p>We detected suspicious activity on your Apple ID.</p>
+    <p>Your account has been locked for your safety.</p>
+    <p><a href="#">Unlock Account</a></p>
+    `,
+    isPhish: true
+  },
 ];
 
 
