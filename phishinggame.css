@@ -42,8 +42,10 @@ body {
   }
 
   .email-card {
-  flex: 1;
-  overflow-y: auto;
+  background: #1e293b;
+  flex: 1;            /* take remaining height */
+  overflow-y: auto;   /* internal scroll */
+  padding: 16px;
 }
 
   .email-header {
