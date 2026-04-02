@@ -96,7 +96,15 @@ function showTip(message) {
 
 tipsClose.addEventListener("click", () => {
   tipsCard.classList.add("hidden");
-  nextBtn.disabled = false;
+
+  // Move to next email
+  index++;
+
+  if (index >= emails.length) {
+    showResults();
+  } else {
+    loadEmail();
+  }
 });
 
 /* SAFE BUTTON */
@@ -139,15 +147,6 @@ document.getElementById("btn-phish").addEventListener("click", () => {
   );
 });
 
-/* NEXT BUTTON */
-document.getElementById("btn-next").onclick = () => {
-  index++;
-  if (index >= emails.length) {
-    showResults();
-  } else {
-    loadEmail();
-  }
-};
 
 function showResults() {
   showScreen("results");
