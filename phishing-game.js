@@ -86,8 +86,8 @@ document.getElementById("btn-safe").addEventListener("click", () => {
     triggerPoliceAlert();
 
     setTimeout(() => {
-        showTip(`Incorrect. Look for urgent or threatening language.<br>
-                 Always check the sender’s full email address.<br>
+        showTip(`Incorrect. Look for urgent or threatening language.
+                 Always check the sender’s full email address.
                  Look for spelling mistakes or odd grammar.`);
     }, 2000); // matches your police alert duration
 } else {
