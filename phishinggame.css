@@ -252,7 +252,7 @@ body::after {
 }
 
 .police-alert {
-    postion: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -260,10 +260,10 @@ body::after {
     pointer-events: none;
     z-index: 99999;
     display: none;
-    animation: policeFlash 0.15s infinate alternate;
+    animation: policeFlash 0.15s infinite alternate;
 }
 
 @keyframes policeFlash {
     0% { background: rgba(225, 0, 0, 0.5); } /* RED */
-    100% { background: rbga(0, 0, 225, 0.5); } /* BLUE */
+    100% { background: rgba(0, 0, 225, 0.5); } /* BLUE */
     
