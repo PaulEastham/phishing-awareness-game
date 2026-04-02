@@ -175,7 +175,7 @@ const emails = [
     isPhish: true
   },
   {
-    from: "Sky sky@notifications.contact.sky",
+    from: "Sky <sky@notifications.contact.sky>",
     subject: "Your password has been changed",
     body: `
       <h2>Your password has been changed</h2><br>
@@ -193,7 +193,7 @@ const emails = [
     isPhish: false
   },
   {
-    from: "Royal Mail delivery@royalmail-fee.co.uk",
+    from: "Royal Mail <delivery@royalmail-fee.co.uk>",
     subject: "Your parcel is waiting – unpaid fee",
     body: `
     <img src="images/rm logo.webp" class="left" width="150" height="150" alt="royal mail logo">
@@ -204,7 +204,7 @@ const emails = [
     isPhish: true
   },
    {
-    from: "NHS Appointments noreply@nhs.net",
+    from: "NHS Appointments <noreply@nhs.net>",
     subject: "Appointment Reminder",
     body: `
     <p>This is a reminder for your upcoming appointment.</p>
@@ -213,7 +213,7 @@ const emails = [
     isPhish: false
   },
    {
-    from: "Apple Support security@appleid-lock.com",
+    from: "Apple Support <security@appleid-lock.com>",
     subject: "Your Apple ID has been locked",
     body: `
    <p>We detected suspicious activity on your Apple ID.</p>
