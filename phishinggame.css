@@ -49,10 +49,11 @@ body {
   }
 
   .choices {
-    display: flex;
-    gap: 12px;
-    margin-top: 16px;
-  }
+  position: sticky;
+  bottom: 0;
+  background: #0f172a;
+  padding: 12px 0;
+}
 
   .safe-btn {
     background: #22c55e;
