@@ -250,3 +250,20 @@ body::after {
         flex-direction: column;
     }
 }
+
+.police-alert {
+    postion: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 99999;
+    display: none;
+    animation: policeFlash 0.15s infinate alternate;
+}
+
+@keyframes policeFlash {
+    0% { background: rgba(225, 0, 0, 0.5); } /* RED */
+    100% { background: rbga(0, 0, 225, 0.5); } /* BLUE */
+    
