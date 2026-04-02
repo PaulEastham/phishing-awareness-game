@@ -202,7 +202,7 @@ const emails = [
     isPhish: true
   },
    {
-    from: ""NHS Appointments <noreply@nhs.net>",
+    from: "NHS Appointments <noreply@nhs.net>",
     subject: "Appointment Reminder",
     body: `
     <p>This is a reminder for your upcoming appointment.</p>
