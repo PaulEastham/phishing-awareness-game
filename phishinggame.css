@@ -13,9 +13,9 @@ body {
   p {
     text-align: center;
   }
-  .active {
-    display: block;
-  }
+  .screen.active {
+  display: flex;                 /* only the active screen is flex */
+}
 
   h1, h2 {
     text-align: center;
