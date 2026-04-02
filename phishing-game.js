@@ -7,55 +7,7 @@ function shuffle(array) {
 }
 
 
-/* EMAIL DATA */
-const emails = [
-  {
-    from: "info.wwypv@phc.diocesewnc.org>",
-    subject: "We've received 62 complaints about your Email - ID:WKNOM",
-    body: `
-      <p>Your iClod storage is almost full. Once you exceed your storage limit, you will no longer be able to back up
-      your photos, documents, contacts, and device data. This means your new
-      photos and videos will stop uploading to iCloud, and cloud storage as well as cloud apps
-      will no longer be updated accross your devices.</p><br>
-      <p>We understand how important it is to keep your data safe.<br>
-      Thats why we're offering you an exclusive deal. Click the button below to get 50GB of free storage!</P>
-      <p><a href="#">Get 50GB Free</a></p>
-    `,
-    isPhish: true
-  },
-  {
-    from: "info@outlook-support.dk",
-    subject: "MS Outlook Support",
-    body: `
-    <img src="images/outlook.png.png" class="left" width="250" height="100" alt="cartoon officer">
-     <br> Dear User,
-      <p>All Hotmail customers have been upgraded to Outlook.com. Youre Hotmail Account services has expired.</p><br>
-      <p>Due to our new system upgrade to Outlook. In order for it to remain active<br>follow the link sign in Re-activate your account to Outlook.<br>
-      <p><a href="#">https://www.account.live.com</a></p>
-      <p>Thanks,</p>
-      <p>Microsoft Support Team</p>
-    `,
-    isPhish: true
-  },
-  {
-    from: "Sky <sky@notifications.contact.sky>",
-    subject: "Your password has been changed",
-    body: `
-      <h2>Your password has been changed</h2><br>
-       <p>
-    As requested, we've changed the password that you use to sign into Sky services. 
-    You will no longer be able to sign in using any of your previous passwords.
-  </p>
-  <p>
-    If you didn't ask us to change your password, 
-    <a href="https://www.sky.com/help" target="_blank" rel="noopener noreferrer">
-      contact us
-    </a> so we can help keep your account secure.
-  </p>
-    `,
-    isPhish: false
-  }
-];
+
 
 /* STATE */
 let index = 0;
@@ -178,7 +130,55 @@ document.getElementById("start-btn").onclick = () => {
   showScreen("game");
 };
 
-
+/* EMAIL DATA */
+const emails = [
+  {
+    from: "info.wwypv@phc.diocesewnc.org>",
+    subject: "We've received 62 complaints about your Email - ID:WKNOM",
+    body: `
+      <p>Your iClod storage is almost full. Once you exceed your storage limit, you will no longer be able to back up
+      your photos, documents, contacts, and device data. This means your new
+      photos and videos will stop uploading to iCloud, and cloud storage as well as cloud apps
+      will no longer be updated accross your devices.</p><br>
+      <p>We understand how important it is to keep your data safe.<br>
+      Thats why we're offering you an exclusive deal. Click the button below to get 50GB of free storage!</P>
+      <p><a href="#">Get 50GB Free</a></p>
+    `,
+    isPhish: true
+  },
+  {
+    from: "info@outlook-support.dk",
+    subject: "MS Outlook Support",
+    body: `
+    <img src="images/outlook.png.png" class="left" width="250" height="100" alt="cartoon officer">
+     <br> Dear User,
+      <p>All Hotmail customers have been upgraded to Outlook.com. Youre Hotmail Account services has expired.</p><br>
+      <p>Due to our new system upgrade to Outlook. In order for it to remain active<br>follow the link sign in Re-activate your account to Outlook.<br>
+      <p><a href="#">https://www.account.live.com</a></p>
+      <p>Thanks,</p>
+      <p>Microsoft Support Team</p>
+    `,
+    isPhish: true
+  },
+  {
+    from: "Sky <sky@notifications.contact.sky>",
+    subject: "Your password has been changed",
+    body: `
+      <h2>Your password has been changed</h2><br>
+       <p>
+    As requested, we've changed the password that you use to sign into Sky services. 
+    You will no longer be able to sign in using any of your previous passwords.
+  </p>
+  <p>
+    If you didn't ask us to change your password, 
+    <a href="https://www.sky.com/help" target="_blank" rel="noopener noreferrer">
+      contact us
+    </a> so we can help keep your account secure.
+  </p>
+    `,
+    isPhish: false
+  }
+];
 
 /* RETURN TO START */
 document.getElementById("end-btn").onclick = () => {
