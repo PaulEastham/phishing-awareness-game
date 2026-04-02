@@ -200,11 +200,11 @@ body::after {
   }
 
 #tips-message {
-  color: #38bdf8; /* Light blue text */
+  color: #008000; 
 }
 
 .tips-content h3 {
-  color: #38bdf8; /* Title colour */
+  color: #008000; 
 }
 .hidden {
   display: none !important;
