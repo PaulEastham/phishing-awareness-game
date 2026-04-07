@@ -4,36 +4,7 @@ function shuffle(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
-  return array;
 }
-
-
-
-//------------------------------------- TIP GENERATOR ----------------------------------------------------------------------------------------//
-const tips = [
-  "Always check the sender’s full email address.",
-  "Hover over links before clicking to reveal the real destination.",
-  "Look for spelling mistakes or odd grammar — scammers often rush.",
-  "Be cautious of emails that create urgency or fear.",
-  "Never enter passwords after clicking a link in an email.",
-  "Check for mismatched or unusual domains (e.g., micr0soft-support.com).",
-  "Don’t trust attachments you weren’t expecting.",
-  "Banks and government services will never ask for passwords by email.",
-  "If an offer seems too good to be true, it usually is.",
-  "Check for generic greetings like 'Dear Customer'.",
-  "Look for inconsistencies in branding, logos, or colours.",
-  "Don’t trust emails asking you to 'verify your account immediately'.",
-  "Never download software from links in unsolicited emails.",
-  "If unsure, contact the company using their official website — not the email link.",
-  "Watch out for fake delivery notifications asking you to pay a fee.",
-  "Multi‑factor authentication protects you even if your password leaks.",
-  "Scammers often impersonate colleagues — double‑check unusual requests.",
-  "Don’t trust emails claiming you’ve won a prize you never entered.",
-  "Check the 'reply‑to' address — it may differ from the sender.",
-  "Be cautious of QR codes in unexpected emails.",
-  "Never approve MFA prompts you didn’t trigger yourself.",
-  "When in doubt, report it — better safe than sorry."
-];
 
 
 //-------------------------------------- STATE -----------------------------------------------------------------------------------------------//
@@ -78,19 +49,18 @@ const tipsMessage = document.getElementById("tips-message");
 const tipsClose = document.getElementById("tips-close");
 const nextBtn = document.getElementById("btn-next");
 
-function getRandomTip() {
-  const randomIndex = Math.floor(Math.random() * tips.length);
-  return tips[randomIndex];
+function showTip(message) {
+  tipsMessage.textContent = message;
+  tipsCard.classList.remove("hidden");
+  nextBtn.disabled = true;
 }
 
 tipsClose.addEventListener("click", () => {
   tipsCard.classList.add("hidden");
-});
 
 
 //---------------------------------------- MOVE TO NEXT EMAIL ------------------------------------------------------------------------//
-document.getElementById("btn-next").addEventListener("click", () => {  
-index++;
+  index++;
 
   if (index >= emails.length) {
     showResults();
@@ -109,16 +79,20 @@ document.getElementById("btn-safe").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-
-    showTip(`Correct! ${getRandomTip()}`);
   } else {
     streak = 0;
+  }
+  if (!isCorrect) {
     triggerPoliceAlert();
 
     setTimeout(() => {
-      showTip(`Incorrect. ${getRandomTip()}`);
-    }, 2000);
-  }
+        showTip(`Incorrect. Look for urgent or threatening language.
+                 Always check the sender’s full email address.
+                 Look for spelling mistakes or odd grammar.`);
+    }, 2000); // matches your police alert duration
+} else {
+    showTip("Correct! Always check the sender address.");
+}
 });
 
 
@@ -131,18 +105,19 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-
-    showTip(`Correct! ${getRandomTip()}`);
   } else {
     streak = 0;
+  }
+ if (!isCorrect) {
     triggerPoliceAlert();
 
     setTimeout(() => {
-      showTip(`Incorrect. ${getRandomTip()}`);
+        showTip("Incorrect. This email used a spoofed domain.");
     }, 2000);
-  }
+} else {
+    showTip("Correct! Hover links before clicking.");
+}
 });
-
 
 
 //------------------  RESULTS FUNC -------------------------------------------------------------------------------------------------//
@@ -162,7 +137,7 @@ document.getElementById("start-btn").onclick = () => {
   streak = 0;
   bestStreak = 0;
 
-  shuffle(emails);
+  shuffle(emails)
 
   loadEmail();
   showScreen("game");
@@ -189,7 +164,7 @@ const emails = [
     from: "info@outlook-support.dk",
     subject: "MS Outlook Support",
     body: `
-    <img src="images/outlook2.png" class="left" width="150" height="100" alt="outlook logo">
+    <img src="images/outlook2.png" class="left" width="150" height="150" alt="outlook logo">
      <br> Dear User,
       <p>All Hotmail customers have been upgraded to Outlook.com. Youre Hotmail Account services has expired.</p><br>
       <p>Due to our new system upgrade to Outlook. In order for it to remain active<br>follow the link sign in Re-activate your account to Outlook.<br>
@@ -203,7 +178,6 @@ const emails = [
     from: "Sky sky@notifications.contact.sky",
     subject: "Your password has been changed",
     body: `
-      <img src="images/sky.jpg" class="left" width="150" height="100" alt="sky logo">
       <h2>Your password has been changed</h2><br>
        <p>
     As requested, we've changed the password that you use to sign into Sky services. 
@@ -222,7 +196,7 @@ const emails = [
     from: "Royal Mail delivery@royalmail-fee.co.uk",
     subject: "Your parcel is waiting – unpaid fee",
     body: `
-    <img src="images/rm logo.webp" class="left" width="150" height="100" alt="royal mail logo">
+    <img src="images/rm logo.webp" class="left" width="150" height="150" alt="royal mail logo">
     <p>Your parcel is being held due to an unpaid fee of £1.99.</p>
     <p>Please pay now to release your delivery.</p>
     <p><a href="#">Pay Fee</a></p>
@@ -233,13 +207,74 @@ const emails = [
     from: "NHS Appointments noreply@nhs.net",
     subject: "Appointment Reminder",
     body: `
-    <img src="images/nhs.png" class="left" width="150" height="100" alt="nhs logo">
     <p>This is a reminder for your upcoming appointment.</p>
     <p>If you need to cancel or reschedule, please use the NHS App.</p>
     `,
     isPhish: false
   },
-   
+   {
+    from: "Apple Support security@appleid-lock.com",
+    subject: "Your Apple ID has been locked",
+    body: `
+   <p>We detected suspicious activity on your Apple ID.</p>
+    <p>Your account has been locked for your safety.</p>
+    <p><a href="#">Unlock Account</a></p>
+    `,
+    isPhish: true
+  },
+   {
+  from: "Amazon <no-reply@amazon.co.uk>",
+  subject: "Your Amazon order has been dispatched",
+  body: `
+    <p>Your order has been dispatched and will arrive tomorrow.</p>
+    <p>Track your parcel in Your Orders.</p>
+  `,
+  isPhish: false
+},
+  {
+  from: "HMRC <refund@tax-service-gov.uk>",
+  subject: "You are owed a tax refund",
+  body: `
+    <p>After our annual review, you are eligible for a tax refund of £274.19.</p>
+    <p>Submit your claim within 48 hours.</p>
+    <p><a href="#">Claim Refund</a></p>
+  `,
+  isPhish: true
+},
+  {
+  from: "Netflix <billing@netflix-update.com>",
+  subject: "Payment failed – update required",
+  body: `
+    <p>Your recent payment could not be processed.</p>
+    <p>To avoid interruption, update your billing informations.</p>
+    <p><a href="#">Update Payment</a></p>
+  `,
+  isPhish: true
+},
+  {
+  from: "Coleg Sir Gâr <info@colegsirgar.ac.uk>",
+  subject: "Important student notice",
+  body: `
+    <p>We have updated our student handbook for the new term.</p>
+    <p>Please review the changes on the student portal.</p>
+  `,
+  isPhish: false
+},
+  {
+  from: "rnicrosoft Account <no-reply@microsoft.com>",
+  subject: "Your microsoft account password is expiring soon",
+  body: `
+    <img src="images/outlook.png" width="200" alt="Microsoft Outlook logo" class="center"><br>
+    <h2>Password Expiry Notification</h2>
+    <p>Dear User,</p>
+    <p>This is a courtesy reminder that your Microsoft account password will expire in <strong>3 days</strong>.</p>
+    <p>To maintain access to Outlook, OneDrive, and other Microsoft services, please update your password before it expires.</p>
+    <p><a href="https://account.microsoft.com/security" target="_blank" rel="noopener noreferrer">Update Password</a></p>
+    <p>Thank you for helping us keep your account secure.</p>
+    <p>— Microsoft Account Team</p>
+  `,
+  isPhish: false
+},
   
 ];
 
@@ -253,7 +288,6 @@ document.getElementById("end-btn").onclick = () => {
 
   showScreen("home");
 };
-
 
 
 //--------------------------------------------------- POLICE ALERT ---------------------------------------------------------------------//
