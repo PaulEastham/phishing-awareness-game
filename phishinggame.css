@@ -6,22 +6,34 @@ body {
   }
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-.game-title {
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 48px;
-  fill: #ffb300; /* yellow-orange */
-  stroke: #000; /* black outline */
-  stroke-width: 3px;
-  paint-order: stroke fill;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-}
 .title-svg {
-  display: block;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
+  display: block;
 }
 
-.phishing { fill: #ffb300; stroke: #000; stroke-width: 3px; paint-order: stroke fill; }
-.awareness { fill: #4fc3f7; stroke: #000; stroke-width: 3px; paint-order: stroke fill; }
+.title-phishing,
+.title-awareness,
+.title-game {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 60px;
+  stroke: #000;
+  stroke-width: 6px;
+  paint-order: stroke fill;
+}
+
+.title-phishing {
+  fill: #ffb300; /* orange-yellow */
+}
+
+.title-awareness {
+  fill: #4fc3f7; /* light blue */
+}
+
+.title-game {
+  fill: #ffffff; /* white */
+}
 
 
 .screen {
