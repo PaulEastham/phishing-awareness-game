@@ -138,7 +138,7 @@ document.getElementById("start-btn").onclick = () => {
   streak = 0;
   bestStreak = 0;
 
-  shuffle(emails)
+  shuffle(emails);
 
   loadEmail();
   showScreen("game");
@@ -215,77 +215,10 @@ const emails = [
     `,
     isPhish: false
   },
-   {
-    from: "Apple Support security@appleid-lock.com",
-    subject: "Your Apple ID has been locked",
-    body: `
-    <img src="images/apple.jpg" class="left" width="150" height="100" alt="apple logo">
-   <p>We detected suspicious activity on your Apple ID.</p>
-    <p>Your account has been locked for your safety.</p>
-    <p><a href="#">Unlock Account</a></p>
-    `,
-    isPhish: true
-  },
-   {
-  from: "Amazon <no-reply@amazon.co.uk>",
-  subject: "Your Amazon order has been dispatched",
-  body: `
-  <img src="images/Amazon.png" class="left" width="150" height="100" alt="amazon logo">
-    <p>Your order has been dispatched and will arrive tomorrow.</p>
-    <p>Track your parcel in Your Orders.</p>
-  `,
-  isPhish: false
-},
-  {
-  from: "HMRC <refund@tax-service-gov.uk>",
-  subject: "You are owed a tax refund",
-  body: `
-  <img src="images/HMRC-Logo.png" class="left" width="150" height="100" alt="hmrc logo">
-    <p>After our annual review, you are eligible for a tax refund of £274.19.</p>
-    <p>Submit your claim within 48 hours.</p>
-    <p><a href="#">Claim Refund</a></p>
-  `,
-  isPhish: true
-},
-  {
-  from: "Netflix <info@account.netflix.com>",
-  subject: "Update required - Netflix account on hold",
-  body: `
-  <img src="images/netflix-logo.jpg" class="left" width="150" height="100" alt="netflix logo">
-    <p>We're having some trouble with your current billing informatio. We'll try again, but in the meantime you may want to update your payment details.</p>
-    <p>To avoid interruption, update your billing informations.</p>
-    <p><a href="#">Update Account Now</a></p>
-  `,
-  isPhish: false
-},
-  {
-  from: "Coleg Sir Gâr <info@colegsirgar.ac.uk>",
-  subject: "Important student notice",
-  body: `
-  <img src="images/colegsirgar.png" class="left" width="150" height="100" alt="welsh college logo">
-    <p>We have updated our student handbook for the new term.</p>
-    <p>Please review the changes on the student portal.</p>
-  `,
-  isPhish: false
-},
-  {
-  from: "rnicrosoft Account <no-reply@microsoft.com>",
-  subject: "Your microsoft account password is expiring soon",
-  body: `
-    <img src="images/outlook.png" width="150" height="100" alt="Microsoft Outlook logo"><br>
-    <h2>Password Expiry Notification</h2>
-    <p>Dear User,</p>
-    <p>This is a courtesy reminder that your Microsoft account password will expire in <strong>3 days</strong>.</p>
-    <p>To maintain access to Outlook, OneDrive, and other Microsoft services, please update your password before it expires.</p>
-    <p><a href="https://account.microsoft.com/security" target="_blank" rel="noopener noreferrer">Update Password</a></p>
-    <p>Thank you for helping us keep your account secure.</p>
-    <p>— Microsoft Account Team</p>
-  `,
-  isPhish: true
-},
+   
   
 ];
-shuffle(emails);
+
 
 //------------------------------------------------- RETURN TO START -------------------------------------------------------------------------//
 document.getElementById("end-btn").onclick = () => {
