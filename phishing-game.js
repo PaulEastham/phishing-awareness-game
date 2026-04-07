@@ -100,47 +100,24 @@ tipsClose.addEventListener("click", () => {
 
 
 //---------------------------------- SAFE BUTTON ----------------------------------------------------------------------------------------//
-document.getElementById("btn-safe").addEventListener("click", () => {
+function handleGuess(guessIsPhish) {
   const email = emails[index];
-  const isCorrect = email.isPhish === false;
+  const isCorrect = email.isPhish === guessIsPhish;
 
   if (isCorrect) {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-
     showTip(`Correct! ${getRandomTip()}`);
   } else {
     streak = 0;
     triggerPoliceAlert();
-
-    setTimeout(() => {
-      showTip(`Incorrect. ${getRandomTip()}`);
-    }, 2000);
+    setTimeout(() => showTip(`Incorrect. ${getRandomTip()}`), 2000);
   }
-});
+}
 
-
-//------------------------------------------ PHISH BUTTON -----------------------------------------------------------------//
-document.getElementById("btn-phish").addEventListener("click", () => {
-  const email = emails[index];
-  const isCorrect = email.isPhish === true;
-
-  if (isCorrect) {
-    correct++;
-    streak++;
-    if (streak > bestStreak) bestStreak = streak;
-
-    showTip(`Correct! ${getRandomTip()}`);
-  } else {
-    streak = 0;
-    triggerPoliceAlert();
-
-    setTimeout(() => {
-      showTip(`Incorrect. ${getRandomTip()}`);
-    }, 2000);
-  }
-});
+document.getElementById("btn-safe").addEventListener("click", () => handleGuess(false));
+document.getElementById("btn-phish").addEventListener("click", () => handleGuess(true));
 
 
 //------------------  RESULTS FUNC -------------------------------------------------------------------------------------------------//
