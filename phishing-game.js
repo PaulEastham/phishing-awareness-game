@@ -89,7 +89,8 @@ tipsClose.addEventListener("click", () => {
 
 
 //---------------------------------------- MOVE TO NEXT EMAIL ------------------------------------------------------------------------//
-  index++;
+document.getElementById("btn-next").addEventListener("click", () => {  
+index++;
 
   if (index >= emails.length) {
     showResults();
