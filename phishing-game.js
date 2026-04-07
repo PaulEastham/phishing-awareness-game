@@ -222,6 +222,60 @@ const emails = [
     `,
     isPhish: true
   },
+   {
+  from: "Amazon <no-reply@amazon.co.uk>",
+  subject: "Your Amazon order has been dispatched",
+  body: `
+    <p>Your order has been dispatched and will arrive tomorrow.</p>
+    <p>Track your parcel in Your Orders.</p>
+  `,
+  isPhish: false
+},
+  {
+  from: "HMRC <refund@tax-service-gov.uk>",
+  subject: "You are owed a tax refund",
+  body: `
+    <p>After our annual review, you are eligible for a tax refund of £274.19.</p>
+    <p>Submit your claim within 48 hours.</p>
+    <p><a href="#">Claim Refund</a></p>
+  `,
+  isPhish: true
+},
+  {
+  from: "Netflix <billing@netflix-update.com>",
+  subject: "Payment failed – update required",
+  body: `
+    <p>Your recent payment could not be processed.</p>
+    <p>To avoid interruption, update your billing informations.</p>
+    <p><a href="#">Update Payment</a></p>
+  `,
+  isPhish: true
+},
+  {
+  from: "Coleg Sir Gâr <info@colegsirgar.ac.uk>",
+  subject: "Important student notice",
+  body: `
+    <p>We have updated our student handbook for the new term.</p>
+    <p>Please review the changes on the student portal.</p>
+  `,
+  isPhish: false
+},
+  {
+  from: "rnicrosoft Account <no-reply@microsoft.com>",
+  subject: "Your microsoft account password is expiring soon",
+  body: `
+    <img src="images/outlook.png" width="200" alt="Microsoft Outlook logo" class="center"><br>
+    <h2>Password Expiry Notification</h2>
+    <p>Dear User,</p>
+    <p>This is a courtesy reminder that your Microsoft account password will expire in <strong>3 days</strong>.</p>
+    <p>To maintain access to Outlook, OneDrive, and other Microsoft services, please update your password before it expires.</p>
+    <p><a href="https://account.microsoft.com/security" target="_blank" rel="noopener noreferrer">Update Password</a></p>
+    <p>Thank you for helping us keep your account secure.</p>
+    <p>— Microsoft Account Team</p>
+  `,
+  isPhish: false
+},
+  
 ];
 
 
