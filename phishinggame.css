@@ -1,75 +1,5 @@
-/* ------------------ GLOBAL ------------------ */
-
-body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
-
-    /* Police border spacing */
-    border-top: 65px solid transparent; 
-    border-bottom: 65px solid transparent;
-    position: relative;
-    min-height: 100vh;
-    box-sizing: border-box;
-    background-color: #0f172a;
-}
-
-/* Police Battenburg Borders */
-body::before, 
-body::after {
-    content: "";
-    position: fixed;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    z-index: 9999;
-    background-color: #ffff00;
-    background-image: 
-        linear-gradient(45deg, #0000ff 25%, transparent 25%), 
-        linear-gradient(-45deg, #0000ff 25%, transparent 25%), 
-        linear-gradient(45deg, transparent 75%, #0000ff 75%), 
-        linear-gradient(-45deg, transparent 75%, #0000ff 75%);
-    background-size: 60px 60px;
-    background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
-}
-
-body::before {
-    top: 0;
-    border-bottom: 5px solid #000;
-}
-
-body::after {
-    bottom: 0;
-    border-top: 5px solid #000;
-}
-
-/* ------------------ SCREENS ------------------ */
-
-.screen {
-    display: none;
-    padding: 20px;
-    max-width: 700px;
-    margin: auto;
-}
-
-.active {
-    display: block;
-}
-
-p {
-    text-align: center;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-/* ------------------ HOME SCREEN ------------------ */
-
-/* Fit everything between police borders */
 #screen-home {
-  min-height: calc(100vh - 130px);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -79,8 +9,12 @@ h1, h2 {
   overflow: hidden;
 }
 
-/* ------------------ TITLE SVG ------------------ */
-
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+  }
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 .title-svg {
@@ -100,13 +34,37 @@ h1, h2 {
   paint-order: stroke fill;
 }
 
-.title-phishing { fill: #ffb300; }
-.title-awareness { fill: #4fc3f7; }
-.title-game { fill: #ffffff; }
+.title-phishing {
+  fill: #ffb300; /* orange-yellow */
+}
 
-/* ------------------ BUTTONS ------------------ */
+.title-awareness {
+  fill: #4fc3f7; /* light blue */
+}
 
-.btn {
+.title-game {
+  fill: #ffffff; /* white */
+}
+
+
+.screen {
+    display: none;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  p {
+    text-align: center;
+  }
+  .active {
+    display: block;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  .btn {
     width: 100%;
     padding: 16px;
     margin-top: 20px;
@@ -115,26 +73,68 @@ h1, h2 {
     font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
-}
+  }
 
-.btn-primary {
+  .btn-primary {
     background: #38bdf8;
     color: #0f172a;
+  }
+
+  .email-card {
+    background: #FFFFFF;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  .email-card,
+  .email-card * {
+  color: #000000 !important;
 }
 
-.safe-btn {
+.email-card a {
+  color: #1d4ed8 !important; /* optional: blue links */
+  text-decoration: underline;
+}
+
+  .email-header {
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .choices {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .safe-btn {
     background: #22c55e;
     color: #0f172a;
-}
+  }
 
-.phish-btn {
+  .phish-btn {
     background: #ef4444;
     color: #fff;
-}
+  }
 
-.next-btn,
-.fin-btn,
-.tips-close {
+  .feedback {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .correct {
+    background: rgba(34, 197, 94, 0.2);
+    border-left: 4px solid #22c55e;
+  }
+
+  .incorrect {
+    background: rgba(239, 68, 68, 0.2);
+    border-left: 4px solid #ef4444;
+  }
+
+  .next-btn {
     margin-top: 16px;
     width: 100%;
     padding: 14px;
@@ -144,110 +144,78 @@ h1, h2 {
     border: none;
     font-size: 1rem;
     font-weight: 600;
-}
+  }
+ .fin-btn {
+     margin-top: 16px;
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+ }
 
-/* ------------------ EMAIL CARD ------------------ */
-
-.email-card {
-    background: #FFFFFF;
-    padding: 16px;
-    border-radius: 12px;
-    margin-top: 20px;
-}
-
-.email-card,
-.email-card * {
-  color: #000 !important;
-}
-
-.email-card a {
-  color: #1d4ed8 !important;
-  text-decoration: underline;
-}
-
-.email-header {
-    border-bottom: 1px solid #334155;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-}
-
-.choices {
-    display: flex;
-    gap: 12px;
-    margin-top: 16px;
-}
-
-.feedback {
-    margin-top: 12px;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.correct {
-    background: rgba(34, 197, 94, 0.2);
-    border-left: 4px solid #22c55e;
-}
-
-.incorrect {
-    background: rgba(239, 68, 68, 0.2);
-    border-left: 4px solid #ef4444;
-}
-
-/* ------------------ SCORE BOX ------------------ */
-
-.score-box {
+  .score-box {
     background: #1e293b;
     padding: 20px;
     border-radius: 12px;
     margin-top: 20px;
+  }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/* Battenburg Border Styling - 2 Row Version */
+body {
+    margin: 0;
+    padding: 0;
+    /* Create space for the borders so content doesn't get hidden */
+    /* 60px height (2 rows of 30px) + 5px black separator */
+    border-top: 65px solid transparent; 
+    border-bottom: 65px solid transparent;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #0f172a /* Light grey background for the app */
 }
 
-/* ------------------ HERO ROW ------------------ */
-
-.hero-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin: 0 auto;
-  width: fit-content;
+body::before, 
+body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 60px; /* This fits two rows of 30px squares */
+    z-index: 9999;
+    
+    /* Creating the 2-row checkerboard */
+    background-color: #ffff00; /* Primary Yellow */
+    background-image: 
+        linear-gradient(45deg, #0000ff 25%, transparent 25%), 
+        linear-gradient(-45deg, #0000ff 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #0000ff 75%), 
+        linear-gradient(-45deg, transparent 75%, #0000ff 75%);
+    background-size: 60px 60px; /* Size determines the square width/height */
+    background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
 }
 
-.hero-img {
-  max-width: 40%;
+/* Top Border Styling */
+body::before {
+    top: 0;
+    border-bottom: 5px solid #000; /* Thick black line to match police aesthetic */
 }
 
-/* QR Code */
-#qrcode {
-  width: 128px;
-  height: 128px;
+/* Bottom Border Styling */
+body::after {
+    bottom: 0;
+    border-top: 5px solid #000;
 }
 
-/* Speech bubble */
-.speech-bubble {
-  background: #38bdf8;
-  color: #0f172a;
-  padding: 10px 18px;
-  border-radius: 12px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  position: relative;
-  margin-left: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
 
-.speech-bubble::after {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent #ffffff transparent transparent;
-}
-
-/* ------------------ TIPS CARD ------------------ */
 
 #tips-card {
   position: fixed;
@@ -263,24 +231,83 @@ h1, h2 {
 }
 
 .tips-content {
-  background: black;
+  background: Black;
   padding: 20px;
   width: 90%;
   max-width: 400px;
   border-radius: 10px;
   text-align: center;
 }
+.tips-close {
+    margin-top: 16px;
+    width: 100%;
+    padding: 14px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+  }
 
-#tips-message,
-.tips-content h3 {
-  color: #008000;
+#tips-message {
+  color: #008000; 
 }
 
+.tips-content h3 {
+  color: #008000; 
+}
 .hidden {
   display: none !important;
 }
 
-/* ------------------ POLICE ALERT ------------------ */
+.hero-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.hero-img {
+  max-width: 40%;
+}
+
+#qrcode {
+  width: 128px;
+  height: 128px;
+}
+
+.speech-bubble {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+  margin-left: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* The little triangle pointer */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #ffffff transparent transparent;
+}
+
+@media (max-width: 600px) {
+    .hero-row {
+        flex-direction: column;
+    }
+}
 
 .police-alert {
     position: fixed;
@@ -295,33 +322,6 @@ h1, h2 {
 }
 
 @keyframes policeFlash {
-    0% { background: rgba(225, 0, 0, 0.5); }
-    100% { background: rgba(0, 0, 225, 0.5); }
-}
-
-/* ------------------ MOBILE FIXES ------------------ */
-
-@media (max-width: 600px) {
-
-    /* Stack hero row */
-    .hero-row {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    /* Scale Bobby */
-    .hero-img {
-        width: 160px;
-        max-width: none;
-    }
-
-    /* Scale title */
-    .title-svg {
-        max-width: 260px;
-    }
-
-    /* Scale QR */
-    #qrcode {
-        transform: scale(0.9);
-    }
-}
+    0% { background: rgba(225, 0, 0, 0.5); } /* RED */
+    100% { background: rgba(0, 0, 225, 0.5); } /* BLUE */
+    
