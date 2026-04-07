@@ -164,7 +164,7 @@ const emails = [
     from: "info@outlook-support.dk",
     subject: "MS Outlook Support",
     body: `
-    <img src="images/outlook2.png" class="left" width="150" height="150" alt="outlook logo">
+    <img src="images/outlook2.png" class="left" width="150" height="100" alt="outlook logo">
      <br> Dear User,
       <p>All Hotmail customers have been upgraded to Outlook.com. Youre Hotmail Account services has expired.</p><br>
       <p>Due to our new system upgrade to Outlook. In order for it to remain active<br>follow the link sign in Re-activate your account to Outlook.<br>
@@ -178,7 +178,7 @@ const emails = [
     from: "Sky sky@notifications.contact.sky",
     subject: "Your password has been changed",
     body: `
-      <img src="images/sky.jpg" class="left" width="150" height="150" alt="sky logo">
+      <img src="images/sky.jpg" class="left" width="150" height="100" alt="sky logo">
       <h2>Your password has been changed</h2><br>
        <p>
     As requested, we've changed the password that you use to sign into Sky services. 
@@ -197,7 +197,7 @@ const emails = [
     from: "Royal Mail delivery@royalmail-fee.co.uk",
     subject: "Your parcel is waiting – unpaid fee",
     body: `
-    <img src="images/rm logo.webp" class="left" width="150" height="150" alt="royal mail logo">
+    <img src="images/rm logo.webp" class="left" width="150" height="100" alt="royal mail logo">
     <p>Your parcel is being held due to an unpaid fee of £1.99.</p>
     <p>Please pay now to release your delivery.</p>
     <p><a href="#">Pay Fee</a></p>
@@ -208,7 +208,7 @@ const emails = [
     from: "NHS Appointments noreply@nhs.net",
     subject: "Appointment Reminder",
     body: `
-    <img src="images/nhs.png" class="left" width="150" height="150" alt="nhs logo">
+    <img src="images/nhs.png" class="left" width="150" height="100" alt="nhs logo">
     <p>This is a reminder for your upcoming appointment.</p>
     <p>If you need to cancel or reschedule, please use the NHS App.</p>
     `,
@@ -218,7 +218,7 @@ const emails = [
     from: "Apple Support security@appleid-lock.com",
     subject: "Your Apple ID has been locked",
     body: `
-    <img src="images/apple.jpg" class="left" width="150" height="150" alt="apple logo">
+    <img src="images/apple.jpg" class="left" width="150" height="100" alt="apple logo">
    <p>We detected suspicious activity on your Apple ID.</p>
     <p>Your account has been locked for your safety.</p>
     <p><a href="#">Unlock Account</a></p>
@@ -229,7 +229,7 @@ const emails = [
   from: "Amazon <no-reply@amazon.co.uk>",
   subject: "Your Amazon order has been dispatched",
   body: `
-  <img src="images/Amazon.png" class="left" width="150" height="150" alt="amazon logo">
+  <img src="images/Amazon.png" class="left" width="150" height="100" alt="amazon logo">
     <p>Your order has been dispatched and will arrive tomorrow.</p>
     <p>Track your parcel in Your Orders.</p>
   `,
@@ -239,7 +239,7 @@ const emails = [
   from: "HMRC <refund@tax-service-gov.uk>",
   subject: "You are owed a tax refund",
   body: `
-  <img src="images/HMRC-Logo.png" class="left" width="150" height="150" alt="hmrc logo">
+  <img src="images/HMRC-Logo.png" class="left" width="150" height="100" alt="hmrc logo">
     <p>After our annual review, you are eligible for a tax refund of £274.19.</p>
     <p>Submit your claim within 48 hours.</p>
     <p><a href="#">Claim Refund</a></p>
@@ -250,18 +250,18 @@ const emails = [
   from: "Netflix <info@account.netflix.com>",
   subject: "Update required - Netflix account on hold",
   body: `
-  <img src="images/netflix-logo.jpg" class="left" width="150" height="150" alt="netflix logo">
+  <img src="images/netflix-logo.jpg" class="left" width="150" height="100" alt="netflix logo">
     <p>We're having some trouble with your current billing informatio. We'll try again, but in the meantime you may want to update your payment details.</p>
     <p>To avoid interruption, update your billing informations.</p>
     <p><a href="#">Update Account Now</a></p>
   `,
-  isPhish: true
+  isPhish: false
 },
   {
   from: "Coleg Sir Gâr <info@colegsirgar.ac.uk>",
   subject: "Important student notice",
   body: `
-  <img src="images/colegsirgar.png" class="left" width="150" height="150" alt="welsh college logo">
+  <img src="images/colegsirgar.png" class="left" width="150" height="100" alt="welsh college logo">
     <p>We have updated our student handbook for the new term.</p>
     <p>Please review the changes on the student portal.</p>
   `,
@@ -271,7 +271,7 @@ const emails = [
   from: "rnicrosoft Account <no-reply@microsoft.com>",
   subject: "Your microsoft account password is expiring soon",
   body: `
-    <img src="images/outlook.png" width="200" alt="Microsoft Outlook logo" class="center"><br>
+    <img src="images/outlook.png" width="150" height="100" alt="Microsoft Outlook logo"><br>
     <h2>Password Expiry Notification</h2>
     <p>Dear User,</p>
     <p>This is a courtesy reminder that your Microsoft account password will expire in <strong>3 days</strong>.</p>
