@@ -229,7 +229,7 @@ document.getElementById("end-btn").onclick = () => {
 
   showScreen("home");
 };
-emails = shuffle(emails);
+shuffle(emails);
 
 
 //--------------------------------------------------- POLICE ALERT ---------------------------------------------------------------------//
