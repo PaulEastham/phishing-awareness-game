@@ -83,6 +83,7 @@ function getRandomTip() {
 
 tipsClose.addEventListener("click", () => {
   tipsCard.classList.add("hidden");
+});
 
 
 //---------------------------------------- MOVE TO NEXT EMAIL ------------------------------------------------------------------------//
@@ -119,7 +120,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
 
 
 //------------------------------------------ PHISH BUTTON -----------------------------------------------------------------//
-document.getElementById("btn-safe").addEventListener("click", () => {
+document.getElementById("btn-phish").addEventListener("click", () => {
   const email = emails[index];
   const isCorrect = email.isPhish === true;
 
