@@ -1,3 +1,11 @@
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+
 #screen-home {
   min-height: 100vh;
   display: flex;
@@ -9,12 +17,6 @@
   overflow: hidden;
 }
 
-body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
-  }
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 .title-svg {
