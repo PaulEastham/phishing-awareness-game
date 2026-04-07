@@ -8,25 +8,18 @@ body {
 
 .game-title {
   font-family: 'Luckiest Guy', cursive;
-  font-size: 3.5rem;
-  text-align: center;
-  color: #ffb300; /* bright yellow-orange for “Phishing” */
-  text-shadow: 
-    2px 2px 0 #000, 
-    -2px -2px 0 #000, 
-    2px -2px 0 #000, 
-    -2px 2px 0 #000; /* bold outline effect */
-  letter-spacing: 1px;
-  margin-bottom: 0.5em;
+  font-size: 48px;
+  fill: #ffb300; /* yellow-orange */
+  stroke: #000; /* black outline */
+  stroke-width: 3px;
+  paint-order: stroke fill;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+.title-svg {
+  display: block;
+  margin: 0 auto;
 }
 
-.phishing {
-  color: #ffb300;
-}
-
-.awareness {
-  color: #4fc3f7;
-}
 
   .screen {
     display: none;
