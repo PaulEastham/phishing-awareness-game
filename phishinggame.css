@@ -20,8 +20,11 @@ body {
   margin: 0 auto;
 }
 
+.phishing { fill: #ffb300; stroke: #000; stroke-width: 3px; paint-order: stroke fill; }
+.awareness { fill: #4fc3f7; stroke: #000; stroke-width: 3px; paint-order: stroke fill; }
 
-  .screen {
+
+.screen {
     display: none;
     padding: 20px;
     max-width: 700px;
