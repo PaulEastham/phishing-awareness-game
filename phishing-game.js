@@ -178,6 +178,7 @@ const emails = [
     from: "Sky sky@notifications.contact.sky",
     subject: "Your password has been changed",
     body: `
+      <img src="images/sky.jpg" class="left" width="150" height="150" alt="sky logo">
       <h2>Your password has been changed</h2><br>
        <p>
     As requested, we've changed the password that you use to sign into Sky services. 
@@ -207,6 +208,7 @@ const emails = [
     from: "NHS Appointments noreply@nhs.net",
     subject: "Appointment Reminder",
     body: `
+    <img src="images/nhs.png" class="left" width="150" height="150" alt="nhs logo">
     <p>This is a reminder for your upcoming appointment.</p>
     <p>If you need to cancel or reschedule, please use the NHS App.</p>
     `,
@@ -216,6 +218,7 @@ const emails = [
     from: "Apple Support security@appleid-lock.com",
     subject: "Your Apple ID has been locked",
     body: `
+    <img src="images/apple.jpg" class="left" width="150" height="150" alt="apple logo">
    <p>We detected suspicious activity on your Apple ID.</p>
     <p>Your account has been locked for your safety.</p>
     <p><a href="#">Unlock Account</a></p>
@@ -226,6 +229,7 @@ const emails = [
   from: "Amazon <no-reply@amazon.co.uk>",
   subject: "Your Amazon order has been dispatched",
   body: `
+  <img src="images/Amazon.png" class="left" width="150" height="150" alt="amazon logo">
     <p>Your order has been dispatched and will arrive tomorrow.</p>
     <p>Track your parcel in Your Orders.</p>
   `,
@@ -235,6 +239,7 @@ const emails = [
   from: "HMRC <refund@tax-service-gov.uk>",
   subject: "You are owed a tax refund",
   body: `
+  <img src="images/HMRC-Logo.png" class="left" width="150" height="150" alt="hmrc logo">
     <p>After our annual review, you are eligible for a tax refund of £274.19.</p>
     <p>Submit your claim within 48 hours.</p>
     <p><a href="#">Claim Refund</a></p>
@@ -245,6 +250,7 @@ const emails = [
   from: "Netflix <billing@netflix-update.com>",
   subject: "Payment failed – update required",
   body: `
+  <img src="images/netflix-logo.jpg" class="left" width="150" height="150" alt="netflix logo">
     <p>Your recent payment could not be processed.</p>
     <p>To avoid interruption, update your billing informations.</p>
     <p><a href="#">Update Payment</a></p>
@@ -255,6 +261,7 @@ const emails = [
   from: "Coleg Sir Gâr <info@colegsirgar.ac.uk>",
   subject: "Important student notice",
   body: `
+  <img src="images/colegsirgar.png" class="left" width="150" height="150" alt="welsh college logo">
     <p>We have updated our student handbook for the new term.</p>
     <p>Please review the changes on the student portal.</p>
   `,
