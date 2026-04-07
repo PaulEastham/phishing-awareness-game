@@ -285,7 +285,7 @@ const emails = [
 },
   
 ];
-
+shuffle(emails);
 
 //------------------------------------------------- RETURN TO START -------------------------------------------------------------------------//
 document.getElementById("end-btn").onclick = () => {
