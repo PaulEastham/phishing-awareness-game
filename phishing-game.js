@@ -247,13 +247,13 @@ const emails = [
   isPhish: true
 },
   {
-  from: "Netflix <billing@netflix-update.com>",
-  subject: "Payment failed – update required",
+  from: "Netflix <info@account.netflix.com>",
+  subject: "Update required - Netflix account on hold",
   body: `
   <img src="images/netflix-logo.jpg" class="left" width="150" height="150" alt="netflix logo">
-    <p>Your recent payment could not be processed.</p>
+    <p>We're having some trouble with your current billing informatio. We'll try again, but in the meantime you may want to update your payment details.</p>
     <p>To avoid interruption, update your billing informations.</p>
-    <p><a href="#">Update Payment</a></p>
+    <p><a href="#">Update Account Now</a></p>
   `,
   isPhish: true
 },
