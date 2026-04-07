@@ -4,6 +4,29 @@ body {
     background: #0f172a;
     color: #e2e8f0;
   }
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.game-title {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #ffb300; /* bright yellow-orange for “Phishing” */
+  text-shadow: 
+    2px 2px 0 #000, 
+    -2px -2px 0 #000, 
+    2px -2px 0 #000, 
+    -2px 2px 0 #000; /* bold outline effect */
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+}
+
+.phishing {
+  color: #ffb300;
+}
+
+.awareness {
+  color: #4fc3f7;
+}
 
   .screen {
     display: none;
