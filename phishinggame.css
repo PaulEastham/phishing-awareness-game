@@ -6,16 +6,6 @@ body {
     color: #e2e8f0;
   }
 
-#screen-home {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
