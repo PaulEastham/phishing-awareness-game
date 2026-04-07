@@ -101,24 +101,48 @@ index++;
 
 
 //---------------------------------- SAFE BUTTON ----------------------------------------------------------------------------------------//
-function handleGuess(guessIsPhish) {
+document.getElementById("btn-safe").addEventListener("click", () => {
   const email = emails[index];
-  const isCorrect = email.isPhish === guessIsPhish;
+  const isCorrect = email.isPhish === false;
 
   if (isCorrect) {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
+
     showTip(`Correct! ${getRandomTip()}`);
   } else {
     streak = 0;
     triggerPoliceAlert();
-    setTimeout(() => showTip(`Incorrect. ${getRandomTip()}`), 2000);
-  }
-}
 
-document.getElementById("btn-safe").addEventListener("click", () => handleGuess(false));
-document.getElementById("btn-phish").addEventListener("click", () => handleGuess(true));
+    setTimeout(() => {
+      showTip(`Incorrect. ${getRandomTip()}`);
+    }, 2000);
+  }
+});
+
+
+//------------------------------------------ PHISH BUTTON -----------------------------------------------------------------//
+document.getElementById("btn-phish").addEventListener("click", () => {
+  const email = emails[index];
+  const isCorrect = email.isPhish === true;
+
+  if (isCorrect) {
+    correct++;
+    streak++;
+    if (streak > bestStreak) bestStreak = streak;
+
+    showTip(`Correct! ${getRandomTip()}`);
+  } else {
+    streak = 0;
+    triggerPoliceAlert();
+
+    setTimeout(() => {
+      showTip(`Incorrect. ${getRandomTip()}`);
+    }, 2000);
+  }
+});
+
 
 
 //------------------  RESULTS FUNC -------------------------------------------------------------------------------------------------//
