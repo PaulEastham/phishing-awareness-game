@@ -300,7 +300,7 @@ const emails = [
     <p>Thank you for helping us keep your account secure.</p>
     <p>— Microsoft Account Team</p>
   `,
-  isPhish: false
+  isPhish: true
 },
   
 ];
