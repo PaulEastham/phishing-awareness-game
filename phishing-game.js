@@ -36,7 +36,7 @@ const tips = [
 
 //-------------------------------------- TIPS FUNCTION ---------------------------------------------------------------------------------------//
 function getRandomTip() {
-  const i = Math.floor(Math.random() * phishingTips.length);
+  const i = Math.floor(Math.random() * tips.length);
   return tips[i];
 }
 //-------------------------------------- STATE -----------------------------------------------------------------------------------------------//
