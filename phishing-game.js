@@ -136,7 +136,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
     triggerPoliceAlert();
 
     setTimeout(() => {
-      showTip("Incorrect. " + getRandomPositiveTip());
+      showTip("Incorrect. " + getRandomTip());
     }, 2000);
   }
 });
@@ -151,7 +151,7 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-    showTip("Correct! " + getRandomTip());
+    showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
     triggerPoliceAlert();
