@@ -7,6 +7,38 @@ function shuffle(array) {
 }
 
 
+
+//-------------------------------------- PHISHING TIPS ARRAY ---------------------------------------------------------------------------------//
+const tips = [
+  "Always check the sender’s full email address.",
+  "Hover over links before clicking to reveal the real destination.",
+  "Look for spelling mistakes or odd grammar — scammers often rush.",
+  "Be cautious of emails that create urgency or fear.",
+  "Never enter passwords after clicking a link in an email.",
+  "Check for mismatched or unusual domains (e.g., micr0soft-support.com).",
+  "Don’t trust attachments you weren’t expecting.",
+  "Banks and government services will never ask for passwords by email.",
+  "If an offer seems too good to be true, it usually is.",
+  "Check for generic greetings like 'Dear Customer'.",
+  "Look for inconsistencies in branding, logos, or colours.",
+  "Don’t trust emails asking you to 'verify your account immediately'.",
+  "Never download software from links in unsolicited emails.",
+  "If unsure, contact the company using their official website — not the email link.",
+  "Watch out for fake delivery notifications asking you to pay a fee.",
+  "Multi‑factor authentication protects you even if your password leaks.",
+  "Scammers often impersonate colleagues — double‑check unusual requests.",
+  "Don’t trust emails claiming you’ve won a prize you never entered.",
+  "Check the 'reply‑to' address — it may differ from the sender.",
+  "Be cautious of QR codes in unexpected emails.",
+  "Never approve MFA prompts you didn’t trigger yourself.",
+  "When in doubt, report it — better safe than sorry."
+];
+
+//-------------------------------------- TIPS FUNCTION ---------------------------------------------------------------------------------------//
+function getRandomTip() {
+  const i = Math.floor(Math.random() * phishingTips.length);
+  return phishingTips[i];
+}
 //-------------------------------------- STATE -----------------------------------------------------------------------------------------------//
 let index = 0;
 let correct = 0;
@@ -105,18 +137,15 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
+    showTip("Correct! " + getRandomTip());
   } else {
     streak = 0;
-  }
- if (!isCorrect) {
     triggerPoliceAlert();
 
     setTimeout(() => {
-        showTip("Incorrect. This email used a spoofed domain.");
+      showTip("Incorrect. " + getRandomTip());
     }, 2000);
-} else {
-    showTip("Correct! Hover links before clicking.");
-}
+  }
 });
 
 
