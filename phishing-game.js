@@ -190,7 +190,7 @@ document.getElementById("start-btn").onclick = () => {
 //------------------------------------------------ EMAIL DATA -------------------------------------------------------------------------//
 const emails = [
   {
-    from: "info.wwypv@phc.diocesewnc.org>",
+    from: "info.wwypv@phc.diocesewnc.org",
     subject: "We've received 62 complaints about your Email - ID:WKNOM",
     body: `
       <p>Your iClod storage is almost full. Once you exceed your storage limit, you will no longer be able to back up
@@ -266,7 +266,7 @@ const emails = [
     isPhish: true
   },
    {
-  from: "Amazon <no-reply@amazon.co.uk>",
+  from: "Amazon no-reply@amazon.co.uk",
   subject: "Your Amazon order has been dispatched",
   body: `
     <p>Your order has been dispatched and will arrive tomorrow.</p>
@@ -275,7 +275,7 @@ const emails = [
   isPhish: false
 },
   {
-  from: "HMRC <refund@tax-service-gov.uk>",
+  from: "HMRC refund@tax-service-gov.uk",
   subject: "You are owed a tax refund",
   body: `
     <p>After our annual review, you are eligible for a tax refund of £274.19.</p>
@@ -285,7 +285,7 @@ const emails = [
   isPhish: true
 },
   {
-  from: "Netflix <billing@netflix-update.com>",
+  from: "Netflix billing@netflix-update.com",
   subject: "Payment failed – update required",
   body: `
     <p>Your recent payment could not be processed.</p>
@@ -295,7 +295,7 @@ const emails = [
   isPhish: true
 },
   {
-  from: "Coleg Sir Gâr <info@colegsirgar.ac.uk>",
+  from: "Coleg Sir Gâr info@colegsirgar.ac.uk",
   subject: "Important student notice",
   body: `
     <p>We have updated our student handbook for the new term.</p>
@@ -304,7 +304,7 @@ const emails = [
   isPhish: false
 },
   {
-  from: "rnicrosoft Account <no-reply@microsoft.com>",
+  from: "rnicrosoft Account no-reply@microsoft.com",
   subject: "Your microsoft account password is expiring soon",
   body: `
     <img src="images/outlook.png" width="200" alt="Microsoft Outlook logo" class="center"><br>
@@ -316,7 +316,7 @@ const emails = [
     <p>Thank you for helping us keep your account secure.</p>
     <p>— Microsoft Account Team</p>
   `,
-  isPhish: false
+  isPhish: true
 },
   
 ];
