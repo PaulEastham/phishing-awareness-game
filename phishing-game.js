@@ -8,36 +8,55 @@ function shuffle(array) {
 
 
 
-//-------------------------------------- PHISHING TIPS ARRAY ---------------------------------------------------------------------------------//
+//-------------------------------------- NEGATIVE PHISHING TIPS ARRAY ---------------------------------------------------------------------------------//
 const tips = [
   "Always check the sender’s full email address.",
   "Hover over links before clicking to reveal the real destination.",
-  "Look for spelling mistakes or odd grammar — scammers often rush.",
+  "Look for spelling mistakes or odd grammar scammers often rush.",
   "Be cautious of emails that create urgency or fear.",
   "Never enter passwords after clicking a link in an email.",
   "Check for mismatched or unusual domains (e.g., micr0soft-support.com).",
   "Don’t trust attachments you weren’t expecting.",
-  "Banks and government services will never ask for passwords by email.",
+  "Banks and government services will never ask for bank details by email.",
   "If an offer seems too good to be true, it usually is.",
   "Check for generic greetings like 'Dear Customer'.",
   "Look for inconsistencies in branding, logos, or colours.",
   "Don’t trust emails asking you to 'verify your account immediately'.",
   "Never download software from links in unsolicited emails.",
-  "If unsure, contact the company using their official website — not the email link.",
+  "If unsure, contact the company using their official website not the email link.",
   "Watch out for fake delivery notifications asking you to pay a fee.",
   "Multi‑factor authentication protects you even if your password leaks.",
-  "Scammers often impersonate colleagues — double‑check unusual requests.",
+  "Scammers often impersonate colleagues double‑check unusual requests.",
   "Don’t trust emails claiming you’ve won a prize you never entered.",
-  "Check the 'reply‑to' address — it may differ from the sender.",
+  "Check the 'reply‑to' address it may differ from the sender.",
   "Be cautious of QR codes in unexpected emails.",
   "Never approve MFA prompts you didn’t trigger yourself.",
   "When in doubt, report it — better safe than sorry."
 ];
 
-//-------------------------------------- TIPS FUNCTION ---------------------------------------------------------------------------------------//
+//-------------------------------------- POSITIVE TIPS ARRAY ---------------------------------------------------------------------------------//
+const positiveTips = [
+  "Great job! You spotted the red flags quickly.",
+  "Nice work your cyber instincts are sharp.",
+  "Correct! Staying alert keeps you safe online.",
+  "Well done! You analysed that email like a pro.",
+  "Excellent! You’re building strong phishing‑detection skills.",
+  "Spot on that’s exactly what a real analyst would do.",
+  "Good catch! You’re getting harder to fool.",
+  "Brilliant! You recognised the signs immediately.",
+  "Correct! Always trust your instincts when something feels off.",
+  "Nice! You’re improving your cyber awareness."
+];
+//-------------------------------------- NEGATIVE TIPS FUNCTION ---------------------------------------------------------------------------------------//
 function getRandomTip() {
   const i = Math.floor(Math.random() * tips.length);
   return tips[i];
+}
+
+//-------------------------------------- POSITIVE TIPS FUNCTION -------------------------------------------------------------------------------------//
+function getRandomPositiveTip() {
+  const i = Math.floor(Math.random() * positiveTips.length);
+  return positiveTips[i];
 }
 //-------------------------------------- STATE -----------------------------------------------------------------------------------------------//
 let index = 0;
@@ -107,24 +126,19 @@ document.getElementById("btn-safe").addEventListener("click", () => {
   const email = emails[index];
   const isCorrect = email.isPhish === false;
 
-  if (isCorrect) {
+ if (isCorrect) {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
+    showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
-  }
-  if (!isCorrect) {
     triggerPoliceAlert();
 
     setTimeout(() => {
-        showTip(`Incorrect. Look for urgent or threatening language.
-                 Always check the sender’s full email address.
-                 Look for spelling mistakes or odd grammar.`);
-    }, 2000); // matches your police alert duration
-} else {
-    showTip("Correct! Always check the sender address.");
-}
+      showTip("Incorrect. " + getRandomPositiveTip());
+    }, 2000);
+  }
 });
 
 
