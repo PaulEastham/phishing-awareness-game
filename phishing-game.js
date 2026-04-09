@@ -91,7 +91,7 @@ tipsClose.addEventListener("click", () => {
   tipsCard.classList.add("hidden");
 
 
-//---------------------------------------- MOVE TO NEXT EMAIL ------------------------------------------------------------------------//
+
   index++;
 
   if (index >= emails.length) {
