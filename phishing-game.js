@@ -129,14 +129,7 @@ tipsClose.addEventListener("click", () => {
   }
 });
 
-//----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
-function playCorrectSound() {
-  const sound = document.getElementById("correct-sound");
-  if (sound) {
-    sound.currentTime = 0;
-    sound.play().catch(() => {});
-  }
-}
+
 //----------------------------------------------------------------- SAFE BUTTON --------------------------------------------------------------------------------------------------------------------------//
 
 document.getElementById("btn-safe").addEventListener("click", () => {
@@ -274,7 +267,7 @@ const emails = [
     from: "Royal Mail delivery@royalmail-fee.co.uk",
     subject: "Your parcel is waiting – unpaid fee",
     body: `
-    <img src="images/rm logo.webp" class="left" width="150" height="150" alt="royal mail logo">
+    <img src="images/rm logo.webp" class="left" width="100" height="100" alt="royal mail logo">
     <p>Your parcel is being held due to an unpaid fee of £1.99.</p>
     <p>Please pay now to release your delivery.</p>
     <p><a href="#">Pay Fee</a></p>
@@ -285,7 +278,7 @@ const emails = [
     from: "NHS Appointments noreply@nhs.net",
     subject: "Appointment Reminder",
     body: `
-    <img src="images/nhs.png" class="left" width="150" height="150" alt="nhs logo">
+    <img src="images/nhs.png" class="left" width="100" height="110" alt="nhs logo">
     <p>This is a reminder for your upcoming appointment.</p>
     <p>If you need to cancel or reschedule, please use the NHS App.</p>
     `,
@@ -295,7 +288,7 @@ const emails = [
     from: "Apple Support security@appleid-lock.com",
     subject: "Your Apple ID has been locked",
     body: `
-    <img src="images/apple.jpg" class="center" width="150" height="150" alt="apple logo">
+    <img src="images/apple.jpg" class="left" width="100" height="100" alt="apple logo">
    <p>We detected suspicious activity on your Apple ID.</p>
     <p>Your account has been locked for your safety.</p>
     <p><a href="#">Unlock Account</a></p>
@@ -306,7 +299,7 @@ const emails = [
   from: "Amazon no-reply@amazon.co.uk",
   subject: "Your Amazon order has been dispatched",
   body: `
-  <img src="images/Amazon.png" class="center" width="150" height="150" alt="amazon logo">
+  <img src="images/Amazon.png" class="center" width="100" height="100" alt="amazon logo">
     <p>Your order has been dispatched and will arrive tomorrow.</p>
     <p>Track your parcel in Your Orders.</p>
   `,
@@ -316,7 +309,7 @@ const emails = [
   from: "HMRC refund@tax-service-gov.uk",
   subject: "You are owed a tax refund",
   body: `
-  <img src="images/HMRC-Logo.png" class="center" width="150" height="150" alt="hmrc logo">
+  <img src="images/HMRC-Logo.png" class="center" width="100" height="100" alt="hmrc logo">
     <p>After our annual review, you are eligible for a tax refund of £274.19.</p>
     <p>Submit your claim within 48 hours.</p>
     <p><a href="#">Claim Refund</a></p>
@@ -385,7 +378,14 @@ function triggerPoliceAlert() {
   const alertOverlay = document.getElementById("police-alert");
   const siren = document.getElementById("siren-sound");
 
-
+//----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
+function playCorrectSound() {
+  const sound = document.getElementById("correct-sound");
+  if (sound) {
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+  }
+}
 
 //----------------------------------------------------------------- SHOW FLASHING OVERLAY ----------------------------------------------------------------------------------------------------//
 
