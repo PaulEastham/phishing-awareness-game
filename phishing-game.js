@@ -142,7 +142,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
     if (streak > bestStreak) bestStreak = streak;
 
     
-   
+    playCorrectSound();
     showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
@@ -379,7 +379,13 @@ function triggerPoliceAlert() {
   const siren = document.getElementById("siren-sound");
 
 //----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
-
+function playCorrectSound() {
+  const sound = document.getElementById("correct-sound");
+  if (sound) {
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+  }
+}
 
 //----------------------------------------------------------------- SHOW FLASHING OVERLAY ----------------------------------------------------------------------------------------------------//
 
