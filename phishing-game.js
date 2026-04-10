@@ -165,7 +165,7 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-    
+    playCorrectSound();
     showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
