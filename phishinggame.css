@@ -1,11 +1,9 @@
-
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
     background: #0f172a;
     color: #e2e8f0;
   }
-
 
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
@@ -37,7 +35,6 @@ body {
 .title-game {
   fill: #ffffff; /* white */
 }
-
 
 .screen {
     display: none;
@@ -130,17 +127,6 @@ body {
     border-left: 4px solid #ef4444;
   }
 
-  .next-btn {
-    margin-top: 16px;
-    width: 100%;
-    padding: 14px;
-    background: #38bdf8;
-    color: #0f172a;
-    border-radius: 10px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-  }
  .fin-btn {
      margin-top: 16px;
     width: 100%;
@@ -159,12 +145,14 @@ body {
     border-radius: 12px;
     margin-top: 20px;
   }
+
   .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
+
 /* Battenburg Border Styling - 2 Row Version */
 body {
     margin: 0;
@@ -211,8 +199,6 @@ body::after {
     border-top: 5px solid #000;
 }
 
-
-
 #tips-card {
   position: fixed;
   top: 0;
@@ -234,6 +220,7 @@ body::after {
   border-radius: 10px;
   text-align: center;
 }
+
 .tips-close {
     margin-top: 16px;
     width: 100%;
@@ -253,6 +240,7 @@ body::after {
 .tips-content h3 {
   color: #008000; 
 }
+
 .hidden {
   display: none !important;
 }
@@ -320,4 +308,3 @@ body::after {
 @keyframes policeFlash {
     0% { background: rgba(225, 0, 0, 0.5); } /* RED */
     100% { background: rgba(0, 0, 225, 0.5); } /* BLUE */
-    
