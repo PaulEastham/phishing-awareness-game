@@ -340,7 +340,6 @@ const emails = [
   subject: "Your microsoft account password is expiring soon",
   body: `
   <img src="images/outlook2.png" class="center" width="150" height="150" alt="outlook logo">
-    <img src="images/outlook.png" width="200" alt="Microsoft Outlook logo" class="center"><br>
     <h2>Password Expiry Notification</h2>
     <p>Dear User,</p>
     <p>This is a courtesy reminder that your Microsoft account password will expire in <strong>3 days</strong>.</p>
