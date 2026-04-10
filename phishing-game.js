@@ -157,7 +157,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-    triggerPoliceAlert();
+    triggercorrectanswer();
     showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
@@ -180,8 +180,7 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-    correct-answer.currentTime = 0; 
-    correct-answer.play().catch(() => {});
+    triggercorrectanswer();
     showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
@@ -370,7 +369,7 @@ function triggerPoliceAlert() {
 
 //----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
 function correctanswer() {
-  const siren = document.getElementById("ding");
+  const siren = document.getElementById("correct-answer");
 //----------------------------------------------------------------- SHOW FLASHING OVERLAY ----------------------------------------------------------------------------------------------------//
 
   alertOverlay.style.display = "block";
