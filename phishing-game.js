@@ -375,9 +375,9 @@ document.getElementById("end-btn").onclick = () => {
 
 function playCorrectSound() {
   const sound = document.getElementById("correct-sound");
-  if (sound) {
-    sound.currentTime = 0;
-    sound.play().catch(() => {});
+  if (ding) {
+    ding.currentTime = 0;
+    ding.play().catch(() => {});
   }
 }
 //----------------------------------------------------------------- POLICE ALERT -------------------------------------------------------------------------------------------------------------//
