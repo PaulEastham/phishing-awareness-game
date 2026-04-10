@@ -303,8 +303,9 @@ const emails = [
   subject: "You are owed a tax refund",
   body: `
   <img src="images/HMRC-Logo.png" class="left" width="100" height="100" alt="hmrc logo">
-    <p>After our annual review, you are eligible for a tax refund of £274.19.</p>
-    <p>Submit your claim within 48 hours.</p>
+    <p>After our annual review, you are eligible for a tax refund of £274.19 from 2020 to 2021.</p>
+    <p> Follow the instructions to claim your tax refund below.</p>
+    <p>You<u>MUST</u>Submit your claim within 48 hours.</p>
     <p><a href="#">Claim Refund</a></p>
   `,
   isPhish: true
