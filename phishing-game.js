@@ -157,7 +157,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-    triggercorrectanswer();
+    correctanswer();
     showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
@@ -180,7 +180,7 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-    triggercorrectanswer();
+    correctanswer();
     showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
