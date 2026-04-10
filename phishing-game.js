@@ -1,40 +1,3 @@
-//----------------------------------------------------------------- ELEMENTS ---------------------------------------------------------------------------------------------------------------------------//
-let index = 0;
-let correct = 0;
-let streak = 0;
-let bestStreak = 0;
-let answered = false;
-
-/* ELEMENTS */
-const screens = {
-  home: document.getElementById("screen-home"),
-  game: document.getElementById("screen-game"),
-  results: document.getElementById("screen-results")
-};
-
-function showScreen(name) {
-  Object.values(screens).forEach(s => s.classList.remove("active"));
-  screens[name].classList.add("active");
-};
-
-
-//----------------------------------------------------------------- GAME LOGIC -----------------------------------------------------------------------------------------------------------------------//
-
-const elFrom = document.getElementById("from");
-const elSubject = document.getElementById("subject");
-const elBody = document.getElementById("body");
-const elFeedback = document.getElementById("feedback");
-
-
-function loadEmail() {
-  const email = emails[index];
-  elFrom.innerHTML = email.from;
-  elSubject.innerHTML = email.subject;
-  elBody.innerHTML = email.body;
-  elFeedback.innerHTML = "";
-};
-
-
 //-------------------------------------------------------------------------------- EMAIL SHUFFLE FUNC -----------------------------------------------------------------------------------------------------//
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -42,22 +5,6 @@ function shuffle(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 };
-
-
-//----------------------------------------------------------------- FRONT PAGE BUTTON -------------------------------------------------------------------------------------------------------------------//
-
-document.getElementById("start-btn").onclick = () => {
-  index = 0;
-  correct = 0;
-  streak = 0;
-  bestStreak = 0;
-
-  shuffle(emails)
-
-  loadEmail();
-  showScreen("game");
-};
-
 
 //----------------------------------------------------------------- NEGATIVE PHISHING TIPS ARRAY ----------------------------------------------------------------------------------------------------//
 
@@ -116,6 +63,42 @@ function getRandomTip() {
 function getRandomPositiveTip() {
   const i = Math.floor(Math.random() * positiveTips.length);
   return positiveTips[i];
+};
+
+//----------------------------------------------------------------- ELEMENTS ---------------------------------------------------------------------------------------------------------------------------//
+let index = 0;
+let correct = 0;
+let streak = 0;
+let bestStreak = 0;
+let answered = false;
+
+/* ELEMENTS */
+const screens = {
+  home: document.getElementById("screen-home"),
+  game: document.getElementById("screen-game"),
+  results: document.getElementById("screen-results")
+};
+
+function showScreen(name) {
+  Object.values(screens).forEach(s => s.classList.remove("active"));
+  screens[name].classList.add("active");
+};
+
+
+//----------------------------------------------------------------- GAME LOGIC -----------------------------------------------------------------------------------------------------------------------//
+
+const elFrom = document.getElementById("from");
+const elSubject = document.getElementById("subject");
+const elBody = document.getElementById("body");
+const elFeedback = document.getElementById("feedback");
+
+
+function loadEmail() {
+  const email = emails[index];
+  elFrom.innerHTML = email.from;
+  elSubject.innerHTML = email.subject;
+  elBody.innerHTML = email.body;
+  elFeedback.innerHTML = "";
 };
 
 
@@ -191,6 +174,41 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     }, 2000);
   }
 });
+
+
+//----------------------------------------------------------------- RESULTS FUNCTION --------------------------------------------------------------------------------------------------------------------//
+
+function showResults() {
+  showScreen("results");
+  const accuracy = Math.round((correct / emails.length) * 100);
+  document.getElementById("final-score").textContent = `${correct} / ${emails.length}`;
+  document.getElementById("final-accuracy").textContent = `${accuracy}%`;
+  document.getElementById("final-streak").textContent = bestStreak;
+};
+
+//----------------------------------------------------------------- FRONT PAGE BUTTON -------------------------------------------------------------------------------------------------------------------//
+
+document.getElementById("start-btn").onclick = () => {
+  index = 0;
+  correct = 0;
+  streak = 0;
+  bestStreak = 0;
+
+  shuffle(emails)
+
+  loadEmail();
+  showScreen("game");
+};
+
+
+
+
+
+
+
+
+
+
 
 
 //----------------------------------------------------------------- EMAIL DATA --------------------------------------------------------------------------------------------------------------------------//
@@ -338,15 +356,7 @@ const emails = [
 ];
 
 
-//----------------------------------------------------------------- RESULTS FUNCTION --------------------------------------------------------------------------------------------------------------------//
 
-function showResults() {
-  showScreen("results");
-  const accuracy = Math.round((correct / emails.length) * 100);
-  document.getElementById("final-score").textContent = `${correct} / ${emails.length}`;
-  document.getElementById("final-accuracy").textContent = `${accuracy}%`;
-  document.getElementById("final-streak").textContent = bestStreak;
-};
 
 
 //----------------------------------------------------------------- RETURN TO START ----------------------------------------------------------------------------------------------------------//
@@ -368,8 +378,7 @@ function triggerPoliceAlert() {
   const siren = document.getElementById("siren-sound");
 
 //----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
-function correctanswer() {
-  const ding = document.getElementById("correct-sound");
+
 //----------------------------------------------------------------- SHOW FLASHING OVERLAY ----------------------------------------------------------------------------------------------------//
 
   alertOverlay.style.display = "block";
@@ -380,10 +389,6 @@ function correctanswer() {
   if (siren) {
     siren.currentTime = 0;
     siren.play().catch(() => {});
-  };
-  if (ding) {
-    ding.currentTime = 0;
-    ding.play().catch(() => {});
   };
 
 //----------------------------------------------------------------- AUTO STOP AFTER 2S -------------------------------------------------------------------------------------------------------//
