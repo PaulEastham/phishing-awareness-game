@@ -157,8 +157,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
-    correct-answer.currentTime = 0; 
-    correct-answer.play().catch(() => {});
+    triggerPoliceAlert();
     showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
@@ -212,7 +211,7 @@ const emails = [
     `,
     isPhish: true
   },
-  {
+    {
     from: "info@outlook-support.dk",
     subject: "MS Outlook Support",
     body: `
@@ -336,6 +335,7 @@ const emails = [
   isPhish: true
 },
   
+
 ];
 
 
@@ -368,7 +368,9 @@ function triggerPoliceAlert() {
   const alertOverlay = document.getElementById("police-alert");
   const siren = document.getElementById("siren-sound");
 
-
+//----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
+function correctanswer() {
+  const siren = document.getElementById("ding");
 //----------------------------------------------------------------- SHOW FLASHING OVERLAY ----------------------------------------------------------------------------------------------------//
 
   alertOverlay.style.display = "block";
