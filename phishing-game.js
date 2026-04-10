@@ -44,7 +44,7 @@ const positiveTips = [
   "Spot on that’s exactly what a real analyst would do.",
   "Good catch! You’re getting harder to fool.",
   "Brilliant! You recognised the signs immediately.",
-  "Correct! Always trust your instincts when something feels off.",
+  "Always trust your instincts when something feels off.",
   "Nice! You’re improving your cyber awareness."
 ];
 //----------------------------------------------------------------- NEGATIVE TIPS FUNCTION ----------------------------------------------------------------------------------------------------------//
