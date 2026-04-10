@@ -377,6 +377,7 @@ function triggerPoliceAlert() {
   const siren = document.getElementById("siren-sound");
 
 //----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
+
 function correctanswer() {
   const ding = document.getElementById("correct-sound");
 
