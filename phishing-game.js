@@ -227,7 +227,7 @@ const emails = [
     from: "info@outlook-support.dk",
     subject: "MS Outlook Support",
     body: `
-    <img src="images/outlook2.png" class="center" width="150" height="150" alt="outlook logo">
+    <img src="images/outlook2.png" class="left" width="150" height="150" alt="outlook logo">
      <br> Dear User,
       <p>All Hotmail customers have been upgraded to Outlook.com. Youre Hotmail Account services has expired.</p><br>
       <p>Due to our new system upgrade to Outlook. In order for it to remain active<br>follow the link sign in Re-activate your account to Outlook.<br>
@@ -281,7 +281,7 @@ const emails = [
     from: "Apple Support security@appleid-lock.com",
     subject: "Your Apple ID has been locked",
     body: `
-    <img src="images/apple.jpg" class="left" width="125" height="100" alt="apple logo">
+    <img src="images/apple.jpg" class="left" width="100" height="100" alt="apple logo">
    <p>We detected suspicious activity on your Apple ID.</p>
     <p>Your account has been locked for your safety.</p>
     <p><a href="#">Unlock Account</a></p>
@@ -302,7 +302,7 @@ const emails = [
   from: "HMRC refund@tax-service-gov.uk",
   subject: "You are owed a tax refund",
   body: `
-  <img src="images/HMRC-Logo.png" class="center" width="100" height="100" alt="hmrc logo">
+  <img src="images/HMRC-Logo.png" class="left" width="100" height="100" alt="hmrc logo">
     <p>After our annual review, you are eligible for a tax refund of £274.19.</p>
     <p>Submit your claim within 48 hours.</p>
     <p><a href="#">Claim Refund</a></p>
@@ -324,7 +324,7 @@ const emails = [
   from: "Coleg Sir Gâr info@colegsirgar.ac.uk",
   subject: "Important student notice",
   body: `
-  <img src="images/colegsirgar.png" class="center" width="150" height="150" alt="welsh college logo">
+  <img src="images/colegsirgar.png" class="left" width="150" height="150" alt="welsh college logo">
     <p>We have updated our student handbook for the new term.</p>
     <p>Please review the changes on the student portal.</p>
   `,
@@ -334,7 +334,7 @@ const emails = [
   from: "rnicrosoft Account no-reply@microsoft.com",
   subject: "Your microsoft account password is expiring soon",
   body: `
-  <img src="images/outlook2.png" class="center" width="150" height="150" alt="outlook logo">
+  <img src="images/outlook2.png" class="left" width="150" height="150" alt="outlook logo">
     <h2>Password Expiry Notification</h2>
     <p>Dear User,</p>
     <p>This is a courtesy reminder that your Microsoft account password will expire in <strong>3 days</strong>.</p>
