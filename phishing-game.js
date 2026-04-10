@@ -38,7 +38,7 @@ const tips = [
 const positiveTips = [
   "Great job! You spotted the red flags quickly.",
   "Nice work your cyber instincts are sharp.",
-  "Correct! Staying alert keeps you safe online.",
+  "Staying alert keeps you safe online.",
   "Well done! You analysed that email like a pro.",
   "Excellent! You’re building strong phishing‑detection skills.",
   "Spot on that’s exactly what a real analyst would do.",
