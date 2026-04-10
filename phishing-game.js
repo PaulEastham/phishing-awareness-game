@@ -141,7 +141,7 @@ document.getElementById("btn-safe").addEventListener("click", () => {
     streak++;
     if (streak > bestStreak) bestStreak = streak;
 
-    playCorrectSound();
+    
    
     showTip("Correct! " + getRandomPositiveTip());
   } else {
@@ -380,14 +380,7 @@ function triggerPoliceAlert() {
 
 //----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
 
-function playCorrectSound() {
-  const ding = document.getElementById("correct-sound");
 
-  if (ding) {
-    ding.currentTime = 0;
-    ding.play().catch(() => {});
-  }
-}
 //----------------------------------------------------------------- SHOW FLASHING OVERLAY ----------------------------------------------------------------------------------------------------//
 
   alertOverlay.style.display = "block";
