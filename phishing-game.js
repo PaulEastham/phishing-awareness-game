@@ -4,7 +4,7 @@ function shuffle(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
-}
+};
 
 
 
@@ -51,13 +51,13 @@ const positiveTips = [
 function getRandomTip() {
   const i = Math.floor(Math.random() * tips.length);
   return tips[i];
-}
+};
 
 //-------------------------------------- POSITIVE TIPS FUNCTION -------------------------------------------------------------------------------------//
 function getRandomPositiveTip() {
   const i = Math.floor(Math.random() * positiveTips.length);
   return positiveTips[i];
-}
+};
 //-------------------------------------- STATE -----------------------------------------------------------------------------------------------//
 let index = 0;
 let correct = 0;
@@ -75,7 +75,7 @@ const screens = {
 function showScreen(name) {
   Object.values(screens).forEach(s => s.classList.remove("active"));
   screens[name].classList.add("active");
-}
+};
 
 
 //------------------------------- GAME LOGIC ---------------------------------------------------------------------------------------------------//
@@ -91,7 +91,7 @@ function loadEmail() {
   elSubject.innerHTML = email.subject;
   elBody.innerHTML = email.body;
   elFeedback.innerHTML = "";
-}
+};
 
 
 //---------------------------------------- TIPS CARD ----------------------------------------------------------------------------------------------//
@@ -170,7 +170,7 @@ function showResults() {
   document.getElementById("final-score").textContent = `${correct} / ${emails.length}`;
   document.getElementById("final-accuracy").textContent = `${accuracy}%`;
   document.getElementById("final-streak").textContent = bestStreak;
-}
+};
 
 
 //---------------------------------------------- FRONT PAGE BUTTON ------------------------------------------------------------------//
@@ -347,7 +347,7 @@ function triggerPoliceAlert() {
   if (siren) {
     siren.currentTime = 0;
     siren.play().catch(() => {});
-  }
+  };
 
   
 //-------------------------- AUTO STOP AFTER 1s -----------------------------------------------------------------------------------//
@@ -355,4 +355,4 @@ function triggerPoliceAlert() {
     alertOverlay.style.display = "none";
     if (siren) siren.pause();
   }, 2000);
-}
+};
