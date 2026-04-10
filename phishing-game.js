@@ -371,14 +371,6 @@ document.getElementById("end-btn").onclick = () => {
   showScreen("home");
 };
 
-
-//----------------------------------------------------------------- POLICE ALERT -------------------------------------------------------------------------------------------------------------//
-
-function triggerPoliceAlert() {
-  const alertOverlay = document.getElementById("police-alert");
-  const siren = document.getElementById("siren-sound");
-
-
 //----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
 
 function playCorrectSound() {
@@ -388,6 +380,14 @@ function playCorrectSound() {
     sound.play().catch(() => {});
   }
 }
+//----------------------------------------------------------------- POLICE ALERT -------------------------------------------------------------------------------------------------------------//
+
+function triggerPoliceAlert() {
+  const alertOverlay = document.getElementById("police-alert");
+  const siren = document.getElementById("siren-sound");
+
+
+
 
 //----------------------------------------------------------------- SHOW FLASHING OVERLAY ----------------------------------------------------------------------------------------------------//
 
