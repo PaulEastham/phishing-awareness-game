@@ -157,6 +157,8 @@ document.getElementById("btn-safe").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
+    correctSound.currentTime = 0; 
+    correctSound.play().catch(() => {});
     showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
@@ -179,6 +181,8 @@ document.getElementById("btn-phish").addEventListener("click", () => {
     correct++;
     streak++;
     if (streak > bestStreak) bestStreak = streak;
+    correctSound.currentTime = 0; 
+    correctSound.play().catch(() => {});
     showTip("Correct! " + getRandomPositiveTip());
   } else {
     streak = 0;
