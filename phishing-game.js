@@ -377,9 +377,10 @@ document.getElementById("end-btn").onclick = () => {
 function triggerPoliceAlert() {
   const alertOverlay = document.getElementById("police-alert");
   const siren = document.getElementById("siren-sound");
-}
+
 
 //----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
+
 function playCorrectSound() {
   const sound = document.getElementById("correct-sound");
   if (sound) {
