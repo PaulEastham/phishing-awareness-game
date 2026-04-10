@@ -129,7 +129,14 @@ tipsClose.addEventListener("click", () => {
   }
 });
 
-
+//----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
+function playCorrectSound() {
+  const sound = document.getElementById("correct-sound");
+  if (sound) {
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
+  }
+}
 //----------------------------------------------------------------- SAFE BUTTON --------------------------------------------------------------------------------------------------------------------------//
 
 document.getElementById("btn-safe").addEventListener("click", () => {
@@ -378,14 +385,7 @@ function triggerPoliceAlert() {
   const alertOverlay = document.getElementById("police-alert");
   const siren = document.getElementById("siren-sound");
 
-//----------------------------------------------------------------- CORRECT ANSWER -----------------------------------------------------------------------------------------------------------//
-function playCorrectSound() {
-  const sound = document.getElementById("correct-sound");
-  if (sound) {
-    sound.currentTime = 0;
-    sound.play().catch(() => {});
-  }
-}
+
 
 //----------------------------------------------------------------- SHOW FLASHING OVERLAY ----------------------------------------------------------------------------------------------------//
 
